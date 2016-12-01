@@ -15,8 +15,8 @@ namespace mobileApp
             // Set our view from the "main" layout resource
             SetContentView (Resource.Layout.Main);
 
-            Button button = FindViewById<Button>(Resource.Id.button1);
-            button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+            //Button button = FindViewById<Button>(Resource.Id.button1);
+            //button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
         }
     }
 }
