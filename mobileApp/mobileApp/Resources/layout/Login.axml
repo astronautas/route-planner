@@ -5,40 +5,59 @@
     android:background="@android:color/white"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+    android:weightSum="100">
     <TextView
+        android:layout_weight="20"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
         android:text="Prisijungimas"
         android:textColor="#fcb150"
         android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/txtSignIn"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    <TextView
+        android:textColor="#fcb150"
+        android:text="Elektroninio pašto adresas"
+        android:layout_weight="10"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:id="@+id/txtSignIn" />
+        android:id="@+id/textView1" />
     <EditText
+        android:layout_weight="10"
         android:id="@+id/txtLoginName"
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:layout_marginBottom="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="25dp"
         android:hint="Name"
         android:paddingLeft="10dp"
-        android:textColor="#000"
-        android:background="@drawable/EditTextStyle" />
+        android:textColor="#000" />
+    <TextView
+        android:text="Slaptažodis"
+        android:textColor="#fcb150"
+        android:layout_weight="10"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3" />
     <EditText
+        android:layout_weight="10"
         android:layout_below="@id/txtLoginName"
         android:inputType="textPassword"
         android:id="@+id/txtLoginPassword"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginLeft="20dp"
-        android:background="@drawable/EditTextStyle"
         android:layout_marginRight="20dp"
         android:hint="Password"
         android:textColor="#000"
         android:paddingLeft="10dp" />
     <RelativeLayout
+        android:layout_weight="40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtLoginPassword"
