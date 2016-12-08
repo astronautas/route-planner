@@ -2,6 +2,64 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <TextView
+        android:text="Prisijungimas"
+        android:textColor="#fcb150"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
+        android:id="@+id/txtSignIn" />
+    <EditText
+        android:id="@+id/txtLoginName"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="25dp"
+        android:hint="Name"
+        android:paddingLeft="10dp"
+        android:textColor="#000"
+        android:background="@drawable/EditTextStyle" />
+    <EditText
+        android:layout_below="@id/txtLoginName"
+        android:inputType="textPassword"
+        android:id="@+id/txtLoginPassword"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/EditTextStyle"
+        android:layout_marginRight="20dp"
+        android:hint="Password"
+        android:textColor="#000"
+        android:paddingLeft="10dp" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtLoginPassword"
+        android:layout_marginTop="50dp"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <Button
+            android:background="#fcb150"
+            android:text="Prisijungti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDialogSignIn"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:height="70dp"
+            android:paddingTop="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp" />
+    </RelativeLayout>
 </LinearLayout>
