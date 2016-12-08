@@ -27,6 +27,7 @@ namespace mobileApp
         public OnSignInEventArgs(string loginName, string loginPassword) : base()
         {
             LoginName = loginName;
+            LoginName = loginName;
             LoginPassword = loginPassword;
         }
     }
