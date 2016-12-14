@@ -2,6 +2,115 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:weightSum="100">
+    <TextView
+        android:layout_weight="30"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Prisijungimas"
+        android:textColor="#fcb150"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/txtSignIn"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    <TextView
+        android:textColor="#fcb150"
+        android:text="Elektroninio pašto adresas"
+        android:layout_weight="10"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/textView1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="bottom" />
+    <EditText
+        android:layout_weight="10"
+        android:background="@drawable/EditTextBack"
+        android:id="@+id/txtLoginName"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="10dp"
+        android:textColor="#000" />
+    <TextView
+        android:text="Slaptažodis"
+        android:textColor="#fcb150"
+        android:layout_weight="10"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/textView3"
+        android:gravity="bottom" />
+    <EditText
+        android:layout_weight="10"
+        android:layout_below="@id/txtLoginName"
+        android:background="@drawable/EditTextBack"
+        android:inputType="textPassword"
+        android:id="@+id/txtLoginPassword"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#000"
+        android:paddingLeft="10dp" />
+    <RelativeLayout
+        android:layout_weight="20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtLoginPassword"
+        android:layout_marginTop="50dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:gravity="center">
+        <Button
+            android:background="@drawable/ButtonSignInStyle"
+            android:text="Prisijungti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDialogSignIn"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:height="70dp"
+            android:paddingTop="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_weight="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:id="@+id/imgBtnFB"
+                android:src="@drawable/facebook_img" />
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:id="@+id/imgbrnTwitter"
+                android:src="@drawable/twitter_img" />
+        </TableRow>
+    </RelativeLayout>
 </LinearLayout>
