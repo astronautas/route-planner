@@ -1,64 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@android:color/background_light"
-    android:weightSum="100"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+    android:weightSum="100">
     <TextView
-        android:text="Create An Account"
+        android:layout_weight="30"
         android:layout_width="match_parent"
-        android:layout_weight="20"
         android:layout_height="0dp"
-        android:textColor="#368DEB"
-        android:id="@+id/txtCreateAnAccount"
+        android:text="Route Planner"
+        android:textColor="#fcb150"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/txtSignIn"
         android:gravity="center"
         android:textSize="25sp"
         android:textStyle="bold" />
-    <Button
-        android:text="SIGN IN"
-        android:layout_width="match_parent"
-        android:layout_weight="15"
-        android:background="@drawable/ButtonSignInStyle"
-        android:layout_height="0dp"
-        android:id="@+id/buttonSignIn"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="20sp" />
     <TextView
-        android:text="Or"
+        android:textColor="#fcb150"
+        android:text="Kelionės pradžios miestas"
+        android:layout_weight="10"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
-        android:layout_weight="15"
-        android:textColor="#000"
         android:layout_height="0dp"
-        android:gravity="center"
-        android:id="@+id/txtOr" />
-    <Button
-        android:text="SIGN UP"
-        android:layout_width="match_parent"
-        android:layout_weight="15"
-        android:layout_height="0dp"
-        android:background="@drawable/ButtonSingUpStyle"
-        android:id="@+id/buttonSignUp"
-        android:layout_marginRight="20dp"
+        android:id="@+id/textView1"
         android:layout_marginLeft="20dp"
-        android:textSize="20sp" />
-    <RelativeLayout
+        android:layout_marginRight="20dp"
+        android:gravity="bottom" />
+    <EditText
+        android:layout_weight="10"
+        android:background="@drawable/EditTextBack"
+        android:id="@+id/txtLoginName"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="35"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="10dp"
+        android:textColor="#000" />
+    <TextView
+        android:text="Kelionės pabaigos miestas"
+        android:textColor="#fcb150"
+        android:layout_weight="10"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/textView3"
+        android:gravity="bottom" />
+    <EditText
+        android:layout_weight="10"
+        android:layout_below="@id/txtLoginName"
+        android:background="@drawable/EditTextBack"
+        android:inputType="textPassword"
+        android:id="@+id/txtLoginPassword"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#000"
+        android:paddingLeft="10dp" />
+    <RelativeLayout
+        android:layout_weight="20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtLoginPassword"
+        android:layout_marginTop="50dp"
         android:minWidth="25px"
-        android:minHeight="25px">
-        <ProgressBar
-            android:layout_width="wrap_content"
+        android:minHeight="25px"
+        android:gravity="center">
+        <Button
+            android:background="@drawable/ButtonSignInStyle"
+            android:text="Ieškoti"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:background="@drawable/ProgressBarStyle"
-            android:indeterminate="true"
-            android:visibility="invisible"
-            android:id="@+id/progressBar1" />
+            android:id="@+id/btnDialogSignIn"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:height="70dp"
+            android:paddingTop="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_weight="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+        </TableRow>
     </RelativeLayout>
 </LinearLayout>

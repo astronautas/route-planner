@@ -106,29 +106,17 @@ namespace mobileApp
 			// aapt resource value: 0x7f070006
 			public const int btnDialogSignUp = 2131165190;
 			
-			// aapt resource value: 0x7f07000d
-			public const int buttonSignIn = 2131165197;
-			
-			// aapt resource value: 0x7f07000f
-			public const int buttonSignUp = 2131165199;
-			
 			// aapt resource value: 0x7f07000a
 			public const int imgBtnFB = 2131165194;
 			
 			// aapt resource value: 0x7f07000b
 			public const int imgbrnTwitter = 2131165195;
 			
-			// aapt resource value: 0x7f070010
-			public const int progressBar1 = 2131165200;
-			
 			// aapt resource value: 0x7f070008
 			public const int textView1 = 2131165192;
 			
 			// aapt resource value: 0x7f070009
 			public const int textView3 = 2131165193;
-			
-			// aapt resource value: 0x7f07000c
-			public const int txtCreateAnAccount = 2131165196;
 			
 			// aapt resource value: 0x7f070004
 			public const int txtEmail = 2131165188;
@@ -141,9 +129,6 @@ namespace mobileApp
 			
 			// aapt resource value: 0x7f070001
 			public const int txtLoginPassword = 2131165185;
-			
-			// aapt resource value: 0x7f07000e
-			public const int txtOr = 2131165198;
 			
 			// aapt resource value: 0x7f070005
 			public const int txtPassword = 2131165189;
