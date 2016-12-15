@@ -3213,7 +3213,7 @@ namespace mobileApp
 			public const int design_navigation_menu_item = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int GenereatedRoutes = 2130903077;
+			public const int GeneratedRoutes = 2130903077;
 			
 			// aapt resource value: 0x7f030026
 			public const int Login = 2130903078;

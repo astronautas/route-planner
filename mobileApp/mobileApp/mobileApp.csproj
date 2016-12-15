@@ -117,6 +117,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GeneratedRoutes.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -132,8 +133,9 @@
     <AndroidResource Include="Resources\layout\toolbar.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\GenereatedRoutes.axml">
+    <AndroidResource Include="Resources\layout\GeneratedRoutes.axml">
       <SubType>Designer</SubType>
+      <CustomToolNamespace>mobileApp</CustomToolNamespace>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
