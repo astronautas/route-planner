@@ -10,9 +10,6 @@ namespace mobileApp
     [Activity(Label = "mobileApp", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
-        private Button _btnSignUp;
-        private Button _btnSignIn;
-        private ProgressBar _progressBar;
 
         protected override void OnCreate(Bundle bundle)
         {
