@@ -117,11 +117,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="GeneratedRoutes.cs" />
-=======
     <Compile Include="LoginActivity.cs" />
->>>>>>> 59d90a346a375190f8756160c5d8b738acb1ee21
     <Compile Include="MainActivity.cs" />
     <Compile Include="RegistrationActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -138,14 +135,11 @@
     <AndroidResource Include="Resources\layout\toolbar.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-<<<<<<< HEAD
     <AndroidResource Include="Resources\layout\GeneratedRoutes.axml">
       <SubType>Designer</SubType>
       <CustomToolNamespace>mobileApp</CustomToolNamespace>
-=======
     <AndroidResource Include="Resources\layout\Register.axml">
       <SubType>Designer</SubType>
->>>>>>> 59d90a346a375190f8756160c5d8b738acb1ee21
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
@@ -193,14 +187,11 @@
     <AndroidResource Include="Resources\drawable\twitter_img.png" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <XamarinComponentReference Include="googleplayservices-maps">
       <Visible>False</Visible>
       <Version>29.0.0.2</Version>
     </XamarinComponentReference>
-=======
     <AndroidResource Include="Resources\drawable\OrangeActionBtn.xml" />
->>>>>>> 59d90a346a375190f8756160c5d8b738acb1ee21
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
