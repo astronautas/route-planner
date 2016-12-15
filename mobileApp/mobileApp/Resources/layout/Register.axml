@@ -24,16 +24,17 @@
     <TextView
         android:textColor="#fcb150"
         android:text="Elektroninio pašto adresas"
-        android:layout_weight="7"
+        android:layout_weight="5"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:id="@+id/textView1"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:textSize="15sp"
         android:gravity="bottom" />
     <EditText
-        android:layout_weight="7"
+        android:layout_weight="9"
         android:background="@drawable/EditTextBack"
         android:id="@+id/txtRegisterEmail"
         android:layout_width="match_parent"
@@ -45,7 +46,8 @@
     <TextView
         android:text="Slaptažodis"
         android:textColor="#fcb150"
-        android:layout_weight="7"
+        android:layout_weight="5"
+        android:textSize="15sp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -54,7 +56,7 @@
         android:id="@+id/textView3"
         android:gravity="bottom" />
     <EditText
-        android:layout_weight="7"
+        android:layout_weight="9"
         android:layout_below="@id/txtRegisterEmail"
         android:background="@drawable/EditTextBack"
         android:inputType="textPassword"
@@ -68,7 +70,8 @@
     <TextView
         android:text="Banko kortelės numeris"
         android:textColor="#fcb150"
-        android:layout_weight="7"
+        android:layout_weight="5"
+        android:textSize="15sp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -77,7 +80,7 @@
         android:id="@+id/textView3"
         android:gravity="bottom" />
     <EditText
-        android:layout_weight="7"
+        android:layout_weight="9"
         android:background="@drawable/EditTextBack"
         android:id="@+id/txtRegCardNumber"
         android:layout_width="match_parent"
@@ -89,7 +92,8 @@
     <TextView
         android:text="Banko kortelės slaptasis kodas"
         android:textColor="#fcb150"
-        android:layout_weight="7"
+        android:layout_weight="5"
+        android:textSize="15sp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -98,7 +102,7 @@
         android:id="@+id/textView3"
         android:gravity="bottom" />
     <EditText
-        android:layout_weight="7"
+        android:layout_weight="9"
         android:background="@drawable/EditTextBack"
         android:inputType="textPassword"
         android:id="@+id/txtRegCardCode"
@@ -111,7 +115,8 @@
     <TextView
         android:text="Banko kortelės galiojimo data"
         android:textColor="#fcb150"
-        android:layout_weight="7"
+        android:layout_weight="5"
+        android:textSize="15sp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -120,7 +125,7 @@
         android:id="@+id/textView5"
         android:gravity="bottom" />
     <EditText
-        android:layout_weight="7"
+        android:layout_weight="9"
         android:background="@drawable/EditTextBack"
         android:id="@+id/txtRegCardDate"
         android:layout_width="match_parent"

@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace mobileApp
 {
-    [Activity(Label = "mobile", MainLauncher = false, Icon = "@drawable/icon")]
+    [Activity(Label = "mobileApp", MainLauncher = true, Icon = "@drawable/icon")]
     class LoginActivity : Activity
     {
         private EditText _txtLoginEmail;
@@ -26,19 +26,27 @@ namespace mobileApp
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Login);
 
-            //Initializing button from layout
-            _btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
-            _txtLoginEmail = FindViewById<EditText>(Resource.Id.txtLoginEmail);
-            _txtLoginPassword = FindViewById<EditText>(Resource.Id.txtLoginPassword);
+            LoadToolbar();
+            LoadEvents();
+        }
 
-            //Login button click action
+        private void LoadToolbar()
+        {
+            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            SetActionBar(toolbar);
+            ActionBar.Title = "Route Planner";
+        }
+
+        private void LoadEvents()
+        {
+            _btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
             _btnLogin.Click += LoginButtonClicked;
         }
 
         private void LoginButtonClicked(object sender, EventArgs args)
         {
-            //Do Something
-            Finish();
+            _txtLoginEmail = FindViewById<EditText>(Resource.Id.txtLoginEmail);
+            _txtLoginPassword = FindViewById<EditText>(Resource.Id.txtLoginPassword);
         }
     }
 }
