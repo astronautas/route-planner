@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="mobileApp.mobileApp" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
   <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23" />
   <application android:label="RoutePlanner" android:theme="@style/ThemeWithActionBar">
@@ -7,4 +8,9 @@
   </application>
   <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+=======
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="mobileApp.mobileApp" android:versionCode="1" android:versionName="1.0">
+	<uses-sdk android:minSdkVersion="21" />
+	<application android:label="RoutePlanner" android:theme="@style/ThemeWithActionBar"></application>
+>>>>>>> 59d90a346a375190f8756160c5d8b738acb1ee21
 </manifest>

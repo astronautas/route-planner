@@ -11,31 +11,32 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
     <TextView
-        android:layout_weight="30"
+        android:layout_weight="10"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="Prisijungimas"
+        android:text="Registracija"
         android:textColor="#fcb150"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/txtSignIn"
+        android:id="@+id/txtRegister"
         android:gravity="center"
         android:textSize="25sp"
         android:textStyle="bold" />
     <TextView
         android:textColor="#fcb150"
         android:text="Elektroninio pašto adresas"
-        android:layout_weight="10"
+        android:layout_weight="5"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:id="@+id/textView1"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:textSize="15sp"
         android:gravity="bottom" />
     <EditText
-        android:layout_weight="10"
+        android:layout_weight="9"
         android:background="@drawable/EditTextBack"
-        android:id="@+id/txtLoginEmail"
+        android:id="@+id/txtRegisterEmail"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginLeft="20dp"
@@ -45,7 +46,8 @@
     <TextView
         android:text="Slaptažodis"
         android:textColor="#fcb150"
-        android:layout_weight="10"
+        android:layout_weight="5"
+        android:textSize="15sp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -54,11 +56,78 @@
         android:id="@+id/textView3"
         android:gravity="bottom" />
     <EditText
-        android:layout_weight="10"
-        android:layout_below="@id/txtLoginEmail"
+        android:layout_weight="9"
+        android:layout_below="@id/txtRegisterEmail"
         android:background="@drawable/EditTextBack"
         android:inputType="textPassword"
-        android:id="@+id/txtLoginPassword"
+        android:id="@+id/txtRegisterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#000"
+        android:paddingLeft="10dp" />
+    <TextView
+        android:text="Banko kortelės numeris"
+        android:textColor="#fcb150"
+        android:layout_weight="5"
+        android:textSize="15sp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/textView3"
+        android:gravity="bottom" />
+    <EditText
+        android:layout_weight="9"
+        android:background="@drawable/EditTextBack"
+        android:id="@+id/txtRegCardNumber"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#000"
+        android:paddingLeft="10dp" />
+    <TextView
+        android:text="Banko kortelės slaptasis kodas"
+        android:textColor="#fcb150"
+        android:layout_weight="5"
+        android:textSize="15sp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/textView3"
+        android:gravity="bottom" />
+    <EditText
+        android:layout_weight="9"
+        android:background="@drawable/EditTextBack"
+        android:inputType="textPassword"
+        android:id="@+id/txtRegCardCode"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#000"
+        android:paddingLeft="10dp" />
+    <TextView
+        android:text="Banko kortelės galiojimo data"
+        android:textColor="#fcb150"
+        android:layout_weight="5"
+        android:textSize="15sp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/textView5"
+        android:gravity="bottom" />
+    <EditText
+        android:layout_weight="9"
+        android:background="@drawable/EditTextBack"
+        android:id="@+id/txtRegCardDate"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginLeft="20dp"
@@ -66,20 +135,19 @@
         android:textColor="#000"
         android:paddingLeft="10dp" />
     <RelativeLayout
-        android:layout_weight="20"
+        android:layout_weight="10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtLoginPassword"
-        android:layout_marginTop="50dp"
+        android:layout_below="@id/txtRegCardDate"
         android:minWidth="25px"
         android:minHeight="25px"
         android:gravity="center">
         <Button
             android:background="@drawable/ButtonSignInStyle"
-            android:text="Prisijungti"
+            android:text="Registruotis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnRegister"
             android:textSize="20dp"
             android:gravity="center"
             android:textColor="#fff"
@@ -93,7 +161,7 @@
             android:layout_marginLeft="30dp" />
     </RelativeLayout>
     <RelativeLayout
-        android:layout_weight="10"
+        android:layout_weight="5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TableRow
@@ -101,18 +169,18 @@
             android:layout_height="wrap_content"
             android:gravity="center">
             <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:id="@+id/imgBtnFB"
+                android:id="@+id/regbtnFB"
                 android:src="@drawable/facebook_img" />
             <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:id="@+id/imgbrnTwitter"
+                android:id="@+id/regbtnTwitter"
                 android:src="@drawable/twitter_img" />
         </TableRow>
     </RelativeLayout>
