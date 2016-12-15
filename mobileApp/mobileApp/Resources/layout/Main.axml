@@ -3,12 +3,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <include
-      android:id="@+id/toolbar"
-      layout="@layout/toolbar" />
-    <Button
-        android:id="@+id/MyButton"
-        android:layout_below="@+id/toolbar"
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Hello" />
+        android:paddingLeft="16dp"
+        android:layout_centerVertical="true"
+        android:paddingRight="16dp"
+        android:orientation="vertical">
+        <EditText
+            android:layout_weight="30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/CityAText"
+            android:theme="@style/ThemeWithActionBar"
+            android:textColor="#fcb150"
+            android:layout_marginBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/firstCity" />
+      
+        <EditText
+            android:layout_weight="30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/CityAText"
+            android:layout_marginBottom="4dp"
+            android:theme="@style/ThemeWithActionBar"
+            android:textColor="#fcb150"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/secondCity" />
+      
+        <Button
+            android:background="@drawable/OrangeActionBtn"       
+            android:id="@+id/SearchRoutesBtn"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/SearchRoutes"
+            android:onClick="searchBtnClick"
+            android:textColor="#fff" />
+    </LinearLayout>
 </RelativeLayout>

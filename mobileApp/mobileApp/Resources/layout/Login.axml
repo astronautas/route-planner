@@ -35,7 +35,7 @@
     <EditText
         android:layout_weight="10"
         android:background="@drawable/EditTextBack"
-        android:id="@+id/txtLoginName"
+        android:id="@+id/txtLoginEmail"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginLeft="20dp"
@@ -55,7 +55,7 @@
         android:gravity="bottom" />
     <EditText
         android:layout_weight="10"
-        android:layout_below="@id/txtLoginName"
+        android:layout_below="@id/txtLoginEmail"
         android:background="@drawable/EditTextBack"
         android:inputType="textPassword"
         android:id="@+id/txtLoginPassword"
@@ -79,7 +79,7 @@
             android:text="Prisijungti"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnDialogSignIn"
+            android:id="@+id/btnLogin"
             android:textSize="20dp"
             android:gravity="center"
             android:textColor="#fff"
