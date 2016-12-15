@@ -20,7 +20,15 @@ namespace mobileApp
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetActionBar(toolbar);
             ActionBar.Title = "Route Planner";
+
+            Button btn = FindViewById<Button>(Resource.Id.MyButton);
+            btn.Click += delegate 
+            {
+                StartActivity(typeof(LoginActivity));
+            };
+
         }
+        
     }
 }
 
