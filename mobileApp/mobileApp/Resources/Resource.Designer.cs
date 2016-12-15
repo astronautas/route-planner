@@ -108,7 +108,7 @@ namespace mobileApp
 			
 			// aapt resource value: 0x7f070006
 			public const int imgBtnFB = 2131165190;
-			
+
 			// aapt resource value: 0x7f070007
 			public const int imgbrnTwitter = 2131165191;
 			
@@ -120,7 +120,10 @@ namespace mobileApp
 			
 			// aapt resource value: 0x7f070008
 			public const int toolbar = 2131165192;
-			
+
+			// aapt resource value: 0x7f070007
+			public const int imgbrnTwitter = 2131165191;
+		
 			// aapt resource value: 0x7f070002
 			public const int txtLoginName = 2131165186;
 			
