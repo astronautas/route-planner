@@ -22,20 +22,18 @@
             android:layout_marginBottom="4dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/firstCity" />
-      
         <EditText
             android:layout_weight="30"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/CityAText"
+            android:hint="@string/CityBText"
             android:layout_marginBottom="4dp"
             android:theme="@style/ThemeWithActionBar"
             android:textColor="#fcb150"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/secondCity" />
-      
         <Button
-            android:background="@drawable/OrangeActionBtn"       
+            android:background="@drawable/OrangeActionBtn"
             android:id="@+id/SearchRoutesBtn"
             android:layout_marginTop="4dp"
             android:layout_below="@+id/toolbar"

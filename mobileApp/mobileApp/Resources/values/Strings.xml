@@ -3,4 +3,5 @@
     <string name="SearchRoutes">Ieškoti maršrutų</string>
     <string name="CityAText">Pradžios miestas</string>
     <string name="CityBText">Pabaigos miestas</string>
+    <string name="vertical_ellipsis">&#8942;</string>
 </resources>

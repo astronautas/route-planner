@@ -5,6 +5,7 @@ using System;
 using System.Threading;
 using Android.Views;
 using Java.Interop;
+using Android.Support.Design.Widget;
 
 namespace mobileApp
 {
@@ -17,9 +18,16 @@ namespace mobileApp
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.Main);
-            
+
             LoadToolbar();
+            LoadSidebarMenu();
             LoadEvents();
+        }
+
+        private void LoadSidebarMenu()
+        {
+            //drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+           // navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
         }
 
         private void LoadToolbar()
@@ -34,6 +42,12 @@ namespace mobileApp
             Button button = FindViewById<Button>(Resource.Id.SearchRoutesBtn);
 
             button.Click += HandleSearchRoutesBtnClick;
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.top_menus, menu);
+            return base.OnCreateOptionsMenu(menu);
         }
 
         private void HandleSearchRoutesBtnClick(object sender, EventArgs ea)
