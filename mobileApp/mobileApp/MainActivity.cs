@@ -19,11 +19,11 @@ namespace mobileApp
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.Main);
-            
 
+            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            SetActionBar(toolbar);
+            ActionBar.Title = "Route Planner";
         }
-        
-        
     }
 }
 
