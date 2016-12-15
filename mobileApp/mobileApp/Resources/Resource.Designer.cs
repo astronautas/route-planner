@@ -2309,11 +2309,14 @@ namespace mobileApp
 			// aapt resource value: 0x7f07002a
 			public const int bottom = 2131165226;
 			
+			// aapt resource value: 0x7f0700ab
+			public const int btnBuyTicket = 2131165355;
+			
 			// aapt resource value: 0x7f070078
 			public const int btnLogin = 2131165304;
 			
-			// aapt resource value: 0x7f0700ab
-			public const int btnRegister = 2131165355;
+			// aapt resource value: 0x7f0700b3
+			public const int btnRegister = 2131165363;
 			
 			// aapt resource value: 0x7f070044
 			public const int buttonPanel = 2131165252;
@@ -2456,6 +2459,9 @@ namespace mobileApp
 			// aapt resource value: 0x7f07000b
 			public const int listMode = 2131165195;
 			
+			// aapt resource value: 0x7f0700aa
+			public const int listRoutes = 2131165354;
+			
 			// aapt resource value: 0x7f070041
 			public const int list_item = 2131165249;
 			
@@ -2573,11 +2579,11 @@ namespace mobileApp
 			// aapt resource value: 0x7f070054
 			public const int radio = 2131165268;
 			
-			// aapt resource value: 0x7f0700ac
-			public const int regbtnFB = 2131165356;
+			// aapt resource value: 0x7f0700b4
+			public const int regbtnFB = 2131165364;
 			
-			// aapt resource value: 0x7f0700ad
-			public const int regbtnTwitter = 2131165357;
+			// aapt resource value: 0x7f0700b5
+			public const int regbtnTwitter = 2131165365;
 			
 			// aapt resource value: 0x7f070030
 			public const int right = 2131165232;
@@ -2648,6 +2654,9 @@ namespace mobileApp
 			// aapt resource value: 0x7f070013
 			public const int showTitle = 2131165203;
 			
+			// aapt resource value: 0x7f0700a4
+			public const int siaip = 2131165348;
+			
 			// aapt resource value: 0x7f07006c
 			public const int snackbar_action = 2131165292;
 			
@@ -2684,6 +2693,9 @@ namespace mobileApp
 			// aapt resource value: 0x7f07000d
 			public const int tabMode = 2131165197;
 			
+			// aapt resource value: 0x7f0700b6
+			public const int tblRowRoute = 2131165366;
+			
 			// aapt resource value: 0x7f0700a1
 			public const int text = 2131165345;
 			
@@ -2699,8 +2711,8 @@ namespace mobileApp
 			// aapt resource value: 0x7f070076
 			public const int textView3 = 2131165302;
 			
-			// aapt resource value: 0x7f0700a9
-			public const int textView5 = 2131165353;
+			// aapt resource value: 0x7f0700b1
+			public const int textView5 = 2131165361;
 			
 			// aapt resource value: 0x7f07009d
 			public const int time = 2131165341;
@@ -2723,29 +2735,56 @@ namespace mobileApp
 			// aapt resource value: 0x7f070069
 			public const int touch_outside = 2131165289;
 			
+			// aapt resource value: 0x7f0700b8
+			public const int txMiddleCity = 2131165368;
+			
+			// aapt resource value: 0x7f0700b7
+			public const int txtFirstCity = 2131165367;
+			
+			// aapt resource value: 0x7f0700a6
+			public const int txtFirstDash = 2131165350;
+			
+			// aapt resource value: 0x7f0700b9
+			public const int txtLastCity = 2131165369;
+			
 			// aapt resource value: 0x7f070075
 			public const int txtLoginEmail = 2131165301;
 			
 			// aapt resource value: 0x7f070077
 			public const int txtLoginPassword = 2131165303;
 			
-			// aapt resource value: 0x7f0700a8
-			public const int txtRegCardCode = 2131165352;
+			// aapt resource value: 0x7f0700a5
+			public const int txtMainFirstCity = 2131165349;
 			
-			// aapt resource value: 0x7f0700aa
-			public const int txtRegCardDate = 2131165354;
+			// aapt resource value: 0x7f0700a9
+			public const int txtMainLastCity = 2131165353;
 			
 			// aapt resource value: 0x7f0700a7
-			public const int txtRegCardNumber = 2131165351;
+			public const int txtMainMiddleCity = 2131165351;
 			
-			// aapt resource value: 0x7f0700a4
-			public const int txtRegister = 2131165348;
+			// aapt resource value: 0x7f0700ba
+			public const int txtPrice = 2131165370;
 			
-			// aapt resource value: 0x7f0700a5
-			public const int txtRegisterEmail = 2131165349;
+			// aapt resource value: 0x7f0700b0
+			public const int txtRegCardCode = 2131165360;
 			
-			// aapt resource value: 0x7f0700a6
-			public const int txtRegisterPassword = 2131165350;
+			// aapt resource value: 0x7f0700b2
+			public const int txtRegCardDate = 2131165362;
+			
+			// aapt resource value: 0x7f0700af
+			public const int txtRegCardNumber = 2131165359;
+			
+			// aapt resource value: 0x7f0700ac
+			public const int txtRegister = 2131165356;
+			
+			// aapt resource value: 0x7f0700ad
+			public const int txtRegisterEmail = 2131165357;
+			
+			// aapt resource value: 0x7f0700ae
+			public const int txtRegisterPassword = 2131165358;
+			
+			// aapt resource value: 0x7f0700a8
+			public const int txtSecondDash = 2131165352;
 			
 			// aapt resource value: 0x7f070073
 			public const int txtSignIn = 2131165299;
@@ -3003,22 +3042,28 @@ namespace mobileApp
 			public const int notification_template_part_time = 2130903092;
 			
 			// aapt resource value: 0x7f030035
-			public const int Register = 2130903093;
+			public const int Order = 2130903093;
 			
 			// aapt resource value: 0x7f030036
-			public const int select_dialog_item_material = 2130903094;
+			public const int Register = 2130903094;
 			
 			// aapt resource value: 0x7f030037
-			public const int select_dialog_multichoice_material = 2130903095;
+			public const int route = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public const int select_dialog_singlechoice_material = 2130903096;
+			public const int select_dialog_item_material = 2130903096;
 			
 			// aapt resource value: 0x7f030039
-			public const int support_simple_spinner_dropdown_item = 2130903097;
+			public const int select_dialog_multichoice_material = 2130903097;
 			
 			// aapt resource value: 0x7f03003a
-			public const int toolbar = 2130903098;
+			public const int select_dialog_singlechoice_material = 2130903098;
+			
+			// aapt resource value: 0x7f03003b
+			public const int support_simple_spinner_dropdown_item = 2130903099;
+			
+			// aapt resource value: 0x7f03003c
+			public const int toolbar = 2130903100;
 			
 			static Layout()
 			{
@@ -3038,6 +3083,15 @@ namespace mobileApp
 			
 			// aapt resource value: 0x7f080028
 			public const int CityBText = 2131230760;
+			
+			// aapt resource value: 0x7f080029
+			public const int FirstCity = 2131230761;
+			
+			// aapt resource value: 0x7f08002b
+			public const int LastCity = 2131230763;
+			
+			// aapt resource value: 0x7f08002a
+			public const int MiddleCity = 2131230762;
 			
 			// aapt resource value: 0x7f080026
 			public const int SearchRoutes = 2131230758;

@@ -3,4 +3,7 @@
     <string name="SearchRoutes">Ieškoti maršrutų</string>
     <string name="CityAText">Pradžios miestas</string>
     <string name="CityBText">Pabaigos miestas</string>
+    <string name="FirstCity">Pirmas miestas</string>
+    <string name="MiddleCity">Vidurinis miestas</string>
+    <string name="LastCity">Paskutinis miestas</string>
 </resources>

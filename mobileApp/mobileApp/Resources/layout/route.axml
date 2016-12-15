@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/tblRowRoute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#fcb150"
+            android:gravity="center">
+  <TextView
+      android:textColor="#ffff"
+      android:text="@string/FirstCity"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/txtFirstCity"
+      android:gravity="center" />
+  <TextView
+      android:textColor="#ffff"
+      android:text=" - "
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/txtFirstDash"
+      android:gravity="center" />
+  <TextView
+      android:textColor="#ffff"
+      android:text="@string/MiddleCity"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/txMiddleCity"
+      android:gravity="center" />
+  <TextView
+      android:textColor="#ffff"
+      android:text=" - "
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/txtSecondDash"
+      android:gravity="center" />
+  <TextView
+      android:textColor="#ffff"
+      android:text="@string/LastCity"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/txtLastCity"
+      android:gravity="center" />
+  <TextView
+      android:textColor="#ffff"
+      android:text="11$"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="80dp"
+      android:id="@+id/txtPrice"
+      android:gravity="center" />
+</TableRow>

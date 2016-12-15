@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:background="@android:color/white"
+    android:weightSum="100">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+    <RelativeLayout
+        android:layout_weight="50"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <Button
+            android:background="@drawable/OrangeActionBtn"
+            android:id="@+id/siaip"
+            android:layout_below="@+id/toolbar"
+            android:text="GOOGLE MAPS HERE"
+            android:textSize="50sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#fff" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_weight="8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <TextView
+                android:textColor="#fcb150"
+                android:text="Vilnius"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtMainFirstCity"
+                android:gravity="center" />
+            <TextView
+                android:textColor="#fcb150"
+                android:text=" - "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtFirstDash"
+                android:gravity="center" />
+            <TextView
+                android:textColor="#fcb150"
+                android:text="Šiauliai"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtMainMiddleCity"
+                android:gravity="center" />
+            <TextView
+                android:textColor="#fcb150"
+                android:text=" - "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtSecondDash"
+                android:gravity="center" />
+            <TextView
+                android:textColor="#fcb150"
+                android:text="Klaipėda"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtMainLastCity"
+                android:gravity="center" />
+        </TableRow>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_weight="27"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:gravity="top">
+        <ListView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/listRoutes" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_weight="10"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:gravity="center">
+        <Button
+            android:background="@drawable/OrangeActionBtn"
+            android:id="@+id/btnBuyTicket"
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Apmokėti maršrutą"
+            android:textColor="#fff" />
+    </RelativeLayout>
+</LinearLayout>
