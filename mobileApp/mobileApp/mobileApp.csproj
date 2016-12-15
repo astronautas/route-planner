@@ -51,8 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DialogSignIn.cs" />
-    <Compile Include="DialogSignUp.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="OnSignInEventArgs.cs" />
     <Compile Include="OnSignUpEventArgs.cs" />
@@ -66,8 +64,9 @@
     <AndroidResource Include="Resources\layout\Login.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\dialog_sign_in.axml" />
-    <AndroidResource Include="Resources\layout\dialog_sign_up.axml" />
+    <AndroidResource Include="Resources\layout\toolbar.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
