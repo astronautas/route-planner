@@ -2309,6 +2309,9 @@ namespace mobileApp
 			// aapt resource value: 0x7f070078
 			public const int btnLogin = 2131165304;
 			
+			// aapt resource value: 0x7f0700a9
+			public const int btnRegister = 2131165353;
+			
 			// aapt resource value: 0x7f070044
 			public const int buttonPanel = 2131165252;
 			
@@ -2564,6 +2567,12 @@ namespace mobileApp
 			// aapt resource value: 0x7f070054
 			public const int radio = 2131165268;
 			
+			// aapt resource value: 0x7f0700aa
+			public const int regbtnFB = 2131165354;
+			
+			// aapt resource value: 0x7f0700ab
+			public const int regbtnTwitter = 2131165355;
+			
 			// aapt resource value: 0x7f070030
 			public const int right = 2131165232;
 			
@@ -2681,6 +2690,9 @@ namespace mobileApp
 			// aapt resource value: 0x7f070076
 			public const int textView3 = 2131165302;
 			
+			// aapt resource value: 0x7f0700a7
+			public const int textView5 = 2131165351;
+			
 			// aapt resource value: 0x7f07009b
 			public const int time = 2131165339;
 			
@@ -2707,6 +2719,24 @@ namespace mobileApp
 			
 			// aapt resource value: 0x7f070077
 			public const int txtLoginPassword = 2131165303;
+			
+			// aapt resource value: 0x7f0700a6
+			public const int txtRegCardCode = 2131165350;
+			
+			// aapt resource value: 0x7f0700a8
+			public const int txtRegCardDate = 2131165352;
+			
+			// aapt resource value: 0x7f0700a5
+			public const int txtRegCardNumber = 2131165349;
+			
+			// aapt resource value: 0x7f0700a2
+			public const int txtRegister = 2131165346;
+			
+			// aapt resource value: 0x7f0700a3
+			public const int txtRegisterEmail = 2131165347;
+			
+			// aapt resource value: 0x7f0700a4
+			public const int txtRegisterPassword = 2131165348;
 			
 			// aapt resource value: 0x7f070073
 			public const int txtSignIn = 2131165299;
@@ -2964,19 +2994,22 @@ namespace mobileApp
 			public const int notification_template_part_time = 2130903092;
 			
 			// aapt resource value: 0x7f030035
-			public const int select_dialog_item_material = 2130903093;
+			public const int Ragister = 2130903093;
 			
 			// aapt resource value: 0x7f030036
-			public const int select_dialog_multichoice_material = 2130903094;
+			public const int select_dialog_item_material = 2130903094;
 			
 			// aapt resource value: 0x7f030037
-			public const int select_dialog_singlechoice_material = 2130903095;
+			public const int select_dialog_multichoice_material = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public const int support_simple_spinner_dropdown_item = 2130903096;
+			public const int select_dialog_singlechoice_material = 2130903096;
 			
 			// aapt resource value: 0x7f030039
-			public const int toolbar = 2130903097;
+			public const int support_simple_spinner_dropdown_item = 2130903097;
+			
+			// aapt resource value: 0x7f03003a
+			public const int toolbar = 2130903098;
 			
 			static Layout()
 			{
