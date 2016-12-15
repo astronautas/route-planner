@@ -17,7 +17,7 @@ namespace mobileApp
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.Main);
-
+            
             LoadToolbar();
             LoadEvents();
         }

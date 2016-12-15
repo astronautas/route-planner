@@ -2310,7 +2310,7 @@ namespace mobileApp
 			public const int bottom = 2131165226;
 			
 			// aapt resource value: 0x7f070078
-			public const int btnDialogSignIn = 2131165304;
+			public const int btnLogin = 2131165304;
 			
 			// aapt resource value: 0x7f070044
 			public const int buttonPanel = 2131165252;
@@ -2712,7 +2712,7 @@ namespace mobileApp
 			public const int touch_outside = 2131165289;
 			
 			// aapt resource value: 0x7f070075
-			public const int txtLoginName = 2131165301;
+			public const int txtLoginEmail = 2131165301;
 			
 			// aapt resource value: 0x7f070077
 			public const int txtLoginPassword = 2131165303;
