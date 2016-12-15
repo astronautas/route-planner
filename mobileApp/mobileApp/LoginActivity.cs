@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace mobileApp
 {
-    [Activity(Label = "mobileApp", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "mobileApp", MainLauncher = false, Icon = "@drawable/icon")]
     class LoginActivity : Activity
     {
         private EditText _txtLoginEmail;
