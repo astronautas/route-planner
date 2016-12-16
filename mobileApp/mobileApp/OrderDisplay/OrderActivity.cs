@@ -10,13 +10,16 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Graphics;
+using Android.Webkit;
+using Android.Gms.Maps;
 
 namespace mobileApp
 {
-    [Activity(Label = "mobileApp", MainLauncher = false, Icon = "@drawable/icon")]
-    class OrderActivity : Activity
+    [Activity(Label = "mobileApp", MainLauncher = true, Icon = "@drawable/icon")]
+    class OrderActivity : Activity, IOnMapReadyCallback
     {
-
+        public GoogleMap mMap;
+        MapFragment mapFragment;
         private Button _btnBuyTicket;
         private TextView _txtMainFirstCity;
         private TextView _txtMainMiddleCity;
@@ -35,6 +38,14 @@ namespace mobileApp
             LoadRouteCities();
             LoadEvents();
 
+            mapFragment = new MapFragment();
+            var ft = FragmentManager.BeginTransaction();
+            ft.Add(Resource.Id.fragmentMap, mapFragment);
+            ft.Commit();
+
+
+            SetUpMap();
+
             _items = new List<RouteToDisplay>();
             _list = FindViewById<ListView>(Resource.Id.listRoutes);
             _list.ItemClick += _list_ItemClick;
@@ -46,6 +57,19 @@ namespace mobileApp
             LoadSetCities();
 
             
+        }
+
+        private void SetUpMap()
+        {
+            if (mMap == null)
+            {
+                mapFragment.GetMapAsync(this);
+            }
+        }
+
+        public void OnMapReady(GoogleMap googleMap)
+        {
+            mMap = googleMap;
         }
 
         private void _list_ItemClick(object sender, AdapterView.ItemClickEventArgs e)

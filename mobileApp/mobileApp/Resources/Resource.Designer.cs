@@ -2753,6 +2753,9 @@ namespace mobileApp
 			// aapt resource value: 0x7f0a00cc
 			public const int fragment1 = 2131361996;
 			
+			// aapt resource value: 0x7f0a00b0
+			public const int fragmentMap = 2131361968;
+			
 			// aapt resource value: 0x7f0a007d
 			public const int fragment_container = 2131361917;
 			
@@ -3028,9 +3031,6 @@ namespace mobileApp
 			
 			// aapt resource value: 0x7f0a001e
 			public const int showTitle = 2131361822;
-			
-			// aapt resource value: 0x7f0a00b0
-			public const int siaip = 2131361968;
 			
 			// aapt resource value: 0x7f0a0077
 			public const int snackbar_action = 2131361911;
