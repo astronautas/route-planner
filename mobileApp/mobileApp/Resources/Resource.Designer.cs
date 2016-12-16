@@ -2750,9 +2750,6 @@ namespace mobileApp
 			// aapt resource value: 0x7f0a0043
 			public const int @fixed = 2131361859;
 			
-			// aapt resource value: 0x7f0a00cc
-			public const int fragment1 = 2131361996;
-			
 			// aapt resource value: 0x7f0a00b0
 			public const int fragmentMap = 2131361968;
 			
@@ -2809,9 +2806,6 @@ namespace mobileApp
 			
 			// aapt resource value: 0x7f0a00b6
 			public const int listRoutes = 2131361974;
-			
-			// aapt resource value: 0x7f0a00cb
-			public const int listView1 = 2131361995;
 			
 			// aapt resource value: 0x7f0a004c
 			public const int list_item = 2131361868;
@@ -3161,9 +3155,6 @@ namespace mobileApp
 			// aapt resource value: 0x7f0a001f
 			public const int useLogo = 2131361823;
 			
-			// aapt resource value: 0x7f0a00ca
-			public const int view1 = 2131361994;
-			
 			// aapt resource value: 0x7f0a000a
 			public const int view_offset_helper = 2131361802;
 			
@@ -3438,25 +3429,19 @@ namespace mobileApp
 			public const int Register = 2130903099;
 			
 			// aapt resource value: 0x7f03003c
-			public const int RouteList = 2130903100;
+			public const int select_dialog_item_material = 2130903100;
 			
 			// aapt resource value: 0x7f03003d
-			public const int RouteListScreen = 2130903101;
+			public const int select_dialog_multichoice_material = 2130903101;
 			
 			// aapt resource value: 0x7f03003e
-			public const int select_dialog_item_material = 2130903102;
+			public const int select_dialog_singlechoice_material = 2130903102;
 			
 			// aapt resource value: 0x7f03003f
-			public const int select_dialog_multichoice_material = 2130903103;
+			public const int support_simple_spinner_dropdown_item = 2130903103;
 			
 			// aapt resource value: 0x7f030040
-			public const int select_dialog_singlechoice_material = 2130903104;
-			
-			// aapt resource value: 0x7f030041
-			public const int support_simple_spinner_dropdown_item = 2130903105;
-			
-			// aapt resource value: 0x7f030042
-			public const int toolbar = 2130903106;
+			public const int toolbar = 2130903104;
 			
 			static Layout()
 			{

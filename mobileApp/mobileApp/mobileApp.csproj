@@ -158,8 +158,6 @@
     <AndroidResource Include="Resources\layout\generatedroute.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\RouteList.axml" />
-    <AndroidResource Include="Resources\layout\RouteListScreen.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">

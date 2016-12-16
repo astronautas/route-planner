@@ -15,7 +15,7 @@ using Android.Gms.Maps;
 
 namespace mobileApp
 {
-    [Activity(Label = "mobileApp", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "mobileApp", MainLauncher = false, Icon = "@drawable/icon")]
     class OrderActivity : Activity, IOnMapReadyCallback
     {
         public GoogleMap mMap;
