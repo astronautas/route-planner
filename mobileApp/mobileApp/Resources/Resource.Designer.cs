@@ -3651,6 +3651,9 @@ namespace mobileApp
 			// aapt resource value: 0x7f080020
 			public const int common_signin_button_text_long = 2131230752;
 			
+			// aapt resource value: 0x7f08004e
+			public const int google_maps_key = 2131230798;
+			
 			// aapt resource value: 0x7f080021
 			public const int mr_button_content_description = 2131230753;
 			
