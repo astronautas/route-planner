@@ -8,7 +8,7 @@ using Java.Interop;
 
 namespace mobileApp
 {
-    [Activity(Label = "mobileApp", MainLauncher = false, Icon = "@drawable/icon")]
+    [Activity(Label = "mobileApp", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
@@ -38,7 +38,7 @@ namespace mobileApp
         {
             var firstCity = FindViewById<EditText>(Resource.Id.firstCity).Text;
             var secondCity = FindViewById<EditText>(Resource.Id.secondCity).Text;
-
+            StartActivity(typeof(GeneratedRoutes));
             // Call route search here
         }
     }
