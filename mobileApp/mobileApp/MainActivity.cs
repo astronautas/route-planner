@@ -8,14 +8,12 @@ using Java.Interop;
 
 namespace mobileApp
 {
-    [Activity(Label = "mobileApp", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "mobileApp", MainLauncher = false, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
-
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
             SetContentView(Resource.Layout.Main);
             
             LoadToolbar();
