@@ -25,7 +25,6 @@ namespace mobileApp
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetActionBar(toolbar);
             ActionBar.Title = "Route Planner";
-            StartActivity(typeof(GeneratedRoutes));
         }
 
         private void LoadEvents()

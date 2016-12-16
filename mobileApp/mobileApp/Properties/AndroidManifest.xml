@@ -1,16 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="mobileApp.mobileApp" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
-  <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23" />
-  <application android:label="RoutePlanner" android:theme="@style/ThemeWithActionBar">
-    <meta-date android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
-    <!--<meta-date android:name="com.google.android.maps.v2.API_KEY" android:value="@string/AIzaSyAHLE7kO_BopQmdJe7OSgRgZcjnSYLPTAI"/>-->
-  </application>
-  <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-=======
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="mobileApp.mobileApp" android:versionCode="1" android:versionName="1.0">
-	<uses-sdk android:minSdkVersion="21" />
-	<application android:label="RoutePlanner" android:theme="@style/ThemeWithActionBar"></application>
->>>>>>> b85f9658949f741483ec46f1295017baf0d605bc
+	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23" />
+	<application android:label="RoutePlanner" android:theme="@style/ThemeWithActionBar">
+		<meta-date android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+		<!--<meta-date android:name="com.google.android.maps.v2.API_KEY" android:value="@string/AIzaSyAHLE7kO_BopQmdJe7OSgRgZcjnSYLPTAI"/>-->
+	</application>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 </manifest>

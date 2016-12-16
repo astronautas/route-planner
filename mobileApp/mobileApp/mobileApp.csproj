@@ -103,10 +103,22 @@
       <HintPath>..\packages\Xamarin.Forms.2.3.3.175\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Base">
+      <HintPath>..\Components\googleplayservices-maps-29.0.0.2\lib\android\Xamarin.GooglePlayServices.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Basement">
+      <HintPath>..\Components\googleplayservices-maps-29.0.0.2\lib\android\Xamarin.GooglePlayServices.Basement.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Maps">
+      <HintPath>..\Components\googleplayservices-maps-29.0.0.2\lib\android\Xamarin.GooglePlayServices.Maps.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GeneratedRoutes.cs" />
+    <Compile Include="Header.cs" />
     <Compile Include="Login\LoginActivity.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MapsManager.cs" />
     <Compile Include="OrderDisplay\OrderActivity.cs" />
     <Compile Include="Registration\RegistrationActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -130,6 +142,9 @@
     <AndroidResource Include="Resources\layout\Order.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\GeneratedRoutes.axml" />
+    <AndroidResource Include="Resources\layout\RouteList.axml" />
+    <AndroidResource Include="Resources\layout\RouteListScreen.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">

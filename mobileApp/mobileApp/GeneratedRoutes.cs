@@ -13,7 +13,7 @@ using Android.Gms.Maps;
 
 namespace mobileApp
 {
-    [Activity(Label = "mobileApp", Icon = "@drawable/icon")]
+    [Activity(Label = "mobileApp", MainLauncher = true, Icon = "@drawable/icon")]
     class GeneratedRoutes : Activity, IOnMapReadyCallback
     {
         public GoogleMap mMap;
