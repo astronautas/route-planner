@@ -127,14 +127,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalculateRoute.cs" />
+    <Compile Include="OrderDisplay\CalculateRoute.cs" />
     <Compile Include="GeneratedRoutes.cs" />
     <Compile Include="Header.cs" />
     <Compile Include="Login\LoginActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MapsManager.cs" />
     <Compile Include="OrderDisplay\OrderActivity.cs" />
-    <Compile Include="Position.cs" />
+    <Compile Include="OrderDisplay\Position.cs" />
     <Compile Include="Registration\RegistrationActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
