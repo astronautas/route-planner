@@ -11,11 +11,9 @@ namespace mobileApp
     [Activity(Label = "mobileApp", MainLauncher = false, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
-
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
             SetContentView(Resource.Layout.Main);
             
             LoadToolbar();
@@ -27,6 +25,7 @@ namespace mobileApp
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetActionBar(toolbar);
             ActionBar.Title = "Route Planner";
+            StartActivity(typeof(GeneratedRoutes));
         }
 
         private void LoadEvents()
