@@ -6,4 +6,5 @@
     <string name="FirstCity">Pirmas miestas</string>
     <string name="MiddleCity">Vidurinis miestas</string>
     <string name="LastCity">Paskutinis miestas</string>
+  <string name="apikey">AIzaSyAHLE7kO_BopQmdJe7OSgRgZcjnSYLPTAI</string>
 </resources>

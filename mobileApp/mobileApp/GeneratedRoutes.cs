@@ -17,11 +17,19 @@ namespace mobileApp
     class GeneratedRoutes : Activity, IOnMapReadyCallback
     {
         public GoogleMap mMap;
+        MapFragment mapFragment;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.GeneratedRoutes);
+            SetContentView(Resource.Layout.generatedroute);
+
+            mapFragment = new MapFragment();
+            var ft = FragmentManager.BeginTransaction();
+            ft.Add(Resource.Id.fragment_container, mapFragment);
+            ft.Commit();
+            
+
             SetUpMap();
         }
 
@@ -29,7 +37,7 @@ namespace mobileApp
         {
             if (mMap == null)
             {
-                FragmentManager.FindFragmentById<MapFragment>(Resource.Id.map).GetMapAsync(this);
+                mapFragment.GetMapAsync(this);
             }
         }
 
