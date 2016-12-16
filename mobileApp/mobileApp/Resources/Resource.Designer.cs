@@ -2693,9 +2693,6 @@ namespace mobileApp
 			// aapt resource value: 0x7f07000d
 			public const int tabMode = 2131165197;
 			
-			// aapt resource value: 0x7f0700b6
-			public const int tblRowRoute = 2131165366;
-			
 			// aapt resource value: 0x7f0700a1
 			public const int text = 2131165345;
 			
@@ -2735,17 +2732,8 @@ namespace mobileApp
 			// aapt resource value: 0x7f070069
 			public const int touch_outside = 2131165289;
 			
-			// aapt resource value: 0x7f0700b8
-			public const int txMiddleCity = 2131165368;
-			
-			// aapt resource value: 0x7f0700b7
-			public const int txtFirstCity = 2131165367;
-			
 			// aapt resource value: 0x7f0700a6
 			public const int txtFirstDash = 2131165350;
-			
-			// aapt resource value: 0x7f0700b9
-			public const int txtLastCity = 2131165369;
 			
 			// aapt resource value: 0x7f070075
 			public const int txtLoginEmail = 2131165301;
@@ -2761,9 +2749,6 @@ namespace mobileApp
 			
 			// aapt resource value: 0x7f0700a7
 			public const int txtMainMiddleCity = 2131165351;
-			
-			// aapt resource value: 0x7f0700ba
-			public const int txtPrice = 2131165370;
 			
 			// aapt resource value: 0x7f0700b0
 			public const int txtRegCardCode = 2131165360;
@@ -3048,22 +3033,19 @@ namespace mobileApp
 			public const int Register = 2130903094;
 			
 			// aapt resource value: 0x7f030037
-			public const int route = 2130903095;
+			public const int select_dialog_item_material = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public const int select_dialog_item_material = 2130903096;
+			public const int select_dialog_multichoice_material = 2130903096;
 			
 			// aapt resource value: 0x7f030039
-			public const int select_dialog_multichoice_material = 2130903097;
+			public const int select_dialog_singlechoice_material = 2130903097;
 			
 			// aapt resource value: 0x7f03003a
-			public const int select_dialog_singlechoice_material = 2130903098;
+			public const int support_simple_spinner_dropdown_item = 2130903098;
 			
 			// aapt resource value: 0x7f03003b
-			public const int support_simple_spinner_dropdown_item = 2130903099;
-			
-			// aapt resource value: 0x7f03003c
-			public const int toolbar = 2130903100;
+			public const int toolbar = 2130903099;
 			
 			static Layout()
 			{
