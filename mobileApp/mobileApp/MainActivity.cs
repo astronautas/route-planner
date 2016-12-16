@@ -8,7 +8,7 @@ using Java.Interop;
 
 namespace mobileApp
 {
-    [Activity(Label = "mobileApp", MainLauncher = false, Icon = "@drawable/icon")]
+    [Activity(Label = "mobileApp", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
 
