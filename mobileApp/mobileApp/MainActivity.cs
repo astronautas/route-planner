@@ -38,7 +38,7 @@ namespace mobileApp
         {
             var firstCity = FindViewById<EditText>(Resource.Id.firstCity).Text;
             var secondCity = FindViewById<EditText>(Resource.Id.secondCity).Text;
-            StartActivity(typeof(GeneratedRoutes));
+
             // Call route search here
         }
     }
