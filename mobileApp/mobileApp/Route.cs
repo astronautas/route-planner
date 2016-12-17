@@ -7,49 +7,81 @@ namespace mobileApp
 {
     class Route
     {
-        private List<Stop> _stops;
-        private List<float> _costs;
-        private List<float> _times;
+        public List<SubRoute> RouteSubRoutes
+        {
+            get;
+            set;
+        }
+
+        public Stop Source
+        {
+            get;
+            set;
+        }
+        public Stop Destination
+        {
+            get;
+            set;
+        }
+
+        public Stop MiddleCity
+        {
+            get;
+            set;
+        }
+
+        public double Cost
+        {
+            get;
+            set;
+        }
+        public double Time
+        {
+            get;
+            set;
+        }
+
+        public void SetMiddleCity()
+        {
+            var stops = GetStops();
+            MiddleCity = stops[Convert.ToInt32((stops.IndexOf(stops.FirstOrDefault()) + stops.IndexOf(stops.LastOrDefault())) / 2)];
+        }
 
         public Route()
         {
-            _stops = null;
-            _costs = null;
-            _times = null;
+
         }
 
-        public void AddStop(Stop stop, float cost, float time)
+        public Route(Stop source, Stop destination)
         {
-            if (_stops != null)
-            {
-                _costs.Add(cost);
-                _times.Add(time);
-            }
-            _stops.Add(stop);
+            RouteSubRoutes = new List<SubRoute>();
+            Source = source;
+            Destination = destination;
         }
 
-        public void AddSubRoute(Stop from, Stop to, float cost, float time)
+        public List<SubRoute> GetSubRoutes()
         {
-            _stops.Add(from);
-            _stops.Add(to);
-            _costs.Add(cost);
-            _times.Add(time);
+            return RouteSubRoutes;
         }
 
-        public float FullCost()
+        public List<Stop> GetStops()
         {
-            return _costs.Sum();
+            var stops = RouteSubRoutes.Select(x => x.From).ToList();
+            stops.Add(Destination);
+            return stops;
         }
 
-        public float FullTime()
+        public void AddSubRoute(SubRoute subRoute)
         {
-            return _times.Sum();
+            RouteSubRoutes.Add(subRoute);
+            SetMiddleCity();
+            Cost = RouteSubRoutes.Sum(x => x.Cost);
+            Time = RouteSubRoutes.Sum(x => x.Time);
         }
 
-        public RouteToDisplay ToRouteDisplay()
+        public override string ToString()
         {
-            //converts route for display
-            throw new NotImplementedException();
+            return Source.Name + "  -  " +  MiddleCity.Name + "  -  " + Destination.Name;
         }
     }
 }

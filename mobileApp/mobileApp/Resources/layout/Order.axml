@@ -14,58 +14,21 @@
         android:layout_weight="35"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:id="@+id/fragmentMap">
-    </FrameLayout>
+        android:id="@+id/fragmentMap" />
     <RelativeLayout
         android:layout_weight="8"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:gravity="center">
-        <TableRow
+        <TextView
+            android:textColor="#fcb150"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-            <TextView
-                android:textColor="#fcb150"
-                android:text="Vilnius"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtMainFirstCity"
-                android:gravity="center" />
-            <TextView
-                android:textColor="#fcb150"
-                android:text=" - "
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtFirstDash"
-                android:gravity="center" />
-            <TextView
-                android:textColor="#fcb150"
-                android:text="Šiauliai"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtMainMiddleCity"
-                android:gravity="center" />
-            <TextView
-                android:textColor="#fcb150"
-                android:text=" - "
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtSecondDash"
-                android:gravity="center" />
-            <TextView
-                android:textColor="#fcb150"
-                android:text="Klaipėda"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtMainLastCity"
-                android:gravity="center" />
-        </TableRow>
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/txtMainCities"
+            android:gravity="center" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_weight="35"
@@ -74,7 +37,36 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:gravity="top">
-        <ListView
+      <TableRow
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/txtRoutes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#fcb150"
+            android:id="@+id/tablerow"
+            android:gravity="center">
+        <TextView           
+           android:minWidth="25px"
+           android:minHeight="25px"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:textColor="#ffff"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="10dp"
+           android:id="@+id/txtPrice" />
+        <TextView
+          android:minWidth="25px"
+          android:minHeight="25px"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:textColor="#ffff"
+          android:layout_marginLeft="10dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/txtTime" />
+      </TableRow>
+      <ListView
+            android:layout_below="@+id/tablerow"
             android:minWidth="25px"
             android:minHeight="25px"
             android:layout_width="match_parent"

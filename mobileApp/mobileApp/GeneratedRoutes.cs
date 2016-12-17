@@ -32,7 +32,6 @@ namespace mobileApp
             ft.Add(Resource.Id.fragmentMap, mapFragment);
             ft.Commit();
             
-
             SetUpMap();
             _generatedRoutesView = FindViewById<ScrollView>(Resource.Id.routesScrollView);
             _generatedRoutes.Add(new RouteToDisplay("Vilnius", "Siauliai", "Klaipeda", "11"));
