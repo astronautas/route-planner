@@ -63,7 +63,6 @@ namespace mobileApp
             {
                 var text = new TextView(this);
                 text.Text = route.ToString();
-                text.SetWidth(900);
                 text.SetTextColor(new Color(252, 177, 80)); //our orange
                 text.SetTextSize(Android.Util.ComplexUnitType.Pt, 10);
                 //text.SetWidth();
