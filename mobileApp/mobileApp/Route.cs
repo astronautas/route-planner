@@ -18,6 +18,14 @@ namespace mobileApp
             _times = null;
         }
 
+        public List<Stop> Stops
+        {
+            get
+            {
+                return _stops;
+            }
+        }
+
         public void AddStop(Stop stop, float cost, float time)
         {
             if (_stops != null)
