@@ -128,7 +128,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BottomToolbar.cs" />
     <Compile Include="GeneratedRoutes.cs" />
     <Compile Include="Header.cs" />
     <Compile Include="Login\LoginActivity.cs" />

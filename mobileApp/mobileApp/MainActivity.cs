@@ -16,11 +16,6 @@ namespace mobileApp
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
 
-            var newFragment = new BottomToolbar();
-            var ft = FragmentManager.BeginTransaction();
-            ft.Add(Resource.Id.bottom_toolbar_container, newFragment);
-            ft.Commit();
-
             LoadToolbar();
             LoadEvents();
         }
@@ -38,21 +33,22 @@ namespace mobileApp
 
             button.Click += HandleSearchRoutesBtnClick;
 
-            //var searchBtn = FindViewById<View>(Resource.Id.searchBtn);
-            //searchBtn.Click += onSearchClick;
+            var searchBtn = FindViewById<ImageView>(Resource.Id.searchBtn);
+            searchBtn.Click += onSearchClick;
 
-            //var loginBtn = FindViewById<View>(Resource.Id.loginBtn);
-            //loginBtn.Click += onLoginClick;
+            var loginBtn = FindViewById<ImageView>(Resource.Id.loginBtn);
+            loginBtn.Click += onLoginClick;
         }
 
         private void HandleSearchRoutesBtnClick(object sender, EventArgs ea)
         {
             var firstCity = FindViewById<EditText>(Resource.Id.firstCity).Text;
             var secondCity = FindViewById<EditText>(Resource.Id.secondCity).Text;
+
             StartActivity(typeof(GeneratedRoutes));
-            // Call route search here
         }
 
+        // Bottom toolbar events
         public void onLoginClick(object sender, EventArgs ea)
         {
             StartActivity(typeof(LoginActivity));
@@ -60,7 +56,7 @@ namespace mobileApp
 
         public void onSearchClick(object sender, EventArgs ea)
         {
-
+            StartActivity(typeof(MainActivity));
         }
     }
 }
