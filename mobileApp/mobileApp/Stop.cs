@@ -2,12 +2,25 @@ namespace mobileApp
 {
     class Stop
     {
-        private string _name;
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+        public Stop DirectsTo
+        {
+            get;
+            set;
+        }
 
         public Stop(string name)
         {
-            _name = name;
+            Name = name;
         }
+
+        
         //further properites might be added
     }
 }
