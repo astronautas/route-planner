@@ -40,6 +40,7 @@ namespace mobileApp
             var secondCity = FindViewById<EditText>(Resource.Id.secondCity).Text;
 
             // Call route search here
+            StartActivity(typeof(GeneratedRoutes));
         }
     }
 }
