@@ -8,12 +8,7 @@ namespace mobileApp
             get;
             set;
         }
-
-        public Stop DirectsTo
-        {
-            get;
-            set;
-        }
+        public Stop() { }
 
         public Stop(string name)
         {

@@ -17,8 +17,10 @@ using Android.Locations;
 using Android.Gms.Maps.Model;
 using System.IO;
 using Android.Content.Res;
+using System.Xml.Serialization;
+using Newtonsoft.Json;
 
-namespace mobileApp
+namespace mobileApp.OrderDisplay
 {
     [Activity(Label = "mobileApp", MainLauncher = false, Icon = "@drawable/icon")]
     class OrderActivity : Activity, IOnMapReadyCallback
@@ -26,13 +28,11 @@ namespace mobileApp
         public GoogleMap mMap;
         MapFragment mapFragment;
         private Button _btnBuyTicket;
-        private TextView _txtMainFirstCity;
-        private TextView _txtMainMiddleCity;
-        private TextView _txtMainLastCity;
+        private TextView _txtMainCities;
+        private TextView _txtPrice;
+        private TextView _txtTime;
         private ListView _list;
-        private List<RouteToDisplay> _items;
-        private Polyline finalRoute;
-        private Route route;
+        private List<SubRoute> _items;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -40,25 +40,19 @@ namespace mobileApp
 
             SetContentView(Resource.Layout.Order);
 
+            string text = Intent.GetStringExtra("ChosenRoute");
+            Route route = JsonConvert.DeserializeObject<Route>(text);
+
+            _items = new List<SubRoute>();
+            
+            AddSubRoutes(route);
+            LoadSubRoutes();
+            LoadFragment();
+            SetUpMap();
             LoadToolbar();
             LoadRouteCities();
             LoadEvents();
-            LoadFragment();
-            SetUpMap();
-
-            _items = new List<RouteToDisplay>();
-            _list = FindViewById<ListView>(Resource.Id.listRoutes);
-            _list.ItemClick += _list_ItemClick;
-
-            //For prototype
-            AddCities(new RouteToDisplay("Vilnius", "Siauliai", "Klaipeda", "11"));
-            AddCities(new RouteToDisplay("Ukmerge", "Panevezys", "Palanga", "15"));
-            AddCities(new RouteToDisplay("Kaunas", "Trakai", "Telsiai", "8"));
-            AddCities(new RouteToDisplay("Vilnius", "Ukmerge", "Taujenai", "5"));
-
-            LoadSetCities();
-
-            
+            SetCities(route);
         }
 
         private void SetUpMap()
@@ -80,38 +74,28 @@ namespace mobileApp
         public void OnMapReady(GoogleMap googleMap)
         {
             mMap = googleMap;
+            ShowOnMap();
         }
 
-        private void _list_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        private void SetCities(Route mainRoute)
         {
-            for (int a = 0; a < e.Parent.ChildCount; a++)
-            {
-                e.Parent.GetChildAt(a).SetBackgroundColor(Color.Transparent);
-            }
-
-            e.View.SetBackgroundColor(Color.ParseColor("#fcb150"));
-            SetMainCities(_items[(int)e.Id]);
-            
-
+            _txtMainCities.Text = mainRoute.ToString();
+            _txtPrice.Text = "Kaina: " + mainRoute.Cost.ToString() + "€";
+            _txtTime.Text = "Trukme: " + mainRoute.Time.ToString() + "h";
         }
 
-        private void SetMainCities(RouteToDisplay item)
+        public void AddSubRoutes(Route mainRoute)
         {
-            _txtMainFirstCity.Text = item.FirstCity;
-            _txtMainMiddleCity.Text = item.MiddleCity;
-            _txtMainLastCity.Text = item.LastCity;
+            foreach(SubRoute sr in mainRoute.RouteSubRoutes)
+                _items.Add(sr);
+        }
 
-            if(item.FirstCity == "Vilnius" && item.MiddleCity == "Ukmerge" && item.LastCity == "Taujenai")
-            {
-
-                ShowOnMap();
-
-            }
-            else
-            {
-                finalRoute.Remove();
-            }
-            //Show on the map
+        private void LoadSubRoutes()
+        {
+            _list = FindViewById<ListView>(Resource.Id.listRoutes);
+            _list.Enabled = false;
+            ArrayAdapter<SubRoute> adapter = new ArrayAdapter<SubRoute>(this, Android.Resource.Layout.SimpleListItem1, _items);
+            _list.Adapter = adapter;
         }
 
         private void ShowOnMap()
@@ -131,7 +115,7 @@ namespace mobileApp
             var index = Convert.ToInt32((route.IndexOf(route.FirstOrDefault()) + route.IndexOf(route.LastOrDefault())) / 2);
             LatLng lastpos = new LatLng(route[index].Latitude, route[index].Longitude);
 
-            finalRoute = mMap.AddPolyline(polylineoption);
+            mMap.AddPolyline(polylineoption);
 
             UpdateCameraPosition(lastpos);
         }
@@ -146,28 +130,14 @@ namespace mobileApp
             CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition(cameraPosition);
             mMap.AnimateCamera(cameraUpdate);
         }
-
-        public void AddCities(RouteToDisplay item)
-        {
-            _items.Add(item);
-        }
-
-        private void LoadSetCities()
-        {
-            ArrayAdapter<RouteToDisplay> adapter = new ArrayAdapter<RouteToDisplay>(this, Android.Resource.Layout.SimpleListItem1, _items);
-            _list.Adapter = adapter;
-        }
+        
 
 
         private void LoadRouteCities()
         {
-            _txtMainFirstCity = FindViewById<TextView>(Resource.Id.txtMainFirstCity);
-            _txtMainMiddleCity = FindViewById<TextView>(Resource.Id.txtMainMiddleCity);
-            _txtMainLastCity = FindViewById<TextView>(Resource.Id.txtMainLastCity);
-
-            _txtMainFirstCity.Text = null;
-            _txtMainMiddleCity.Text = null;
-            _txtMainLastCity.Text = null;
+            _txtMainCities = FindViewById<TextView>(Resource.Id.txtMainCities);
+            _txtPrice = FindViewById<TextView>(Resource.Id.txtPrice);
+            _txtTime = FindViewById<TextView>(Resource.Id.txtTime);
         }
 
         private void LoadToolbar()
@@ -179,6 +149,7 @@ namespace mobileApp
 
         private void LoadEvents()
         {
+
             _btnBuyTicket = FindViewById<Button>(Resource.Id.btnBuyTicket);
             _btnBuyTicket.Click += BuyTicketButton;
         }
@@ -186,6 +157,7 @@ namespace mobileApp
         private void BuyTicketButton(object sender, EventArgs args)
         {
             //Send to Succeeded or failed payment or smth.
+            StartActivity(typeof(OrderSuccess));
         }
     }
 }
