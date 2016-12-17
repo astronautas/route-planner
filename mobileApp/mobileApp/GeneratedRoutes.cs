@@ -11,6 +11,8 @@ using Android.Views;
 using Android.Widget;
 using Android.Gms.Maps;
 using Android.Graphics;
+using mobileApp.OrderDisplay;
+using Newtonsoft.Json;
 
 namespace mobileApp
 {
@@ -20,7 +22,7 @@ namespace mobileApp
         public GoogleMap mMap;
         MapFragment mapFragment;
         private ScrollView _generatedRoutesView;
-        private List<RouteToDisplay> _generatedRoutes = new List<RouteToDisplay>(); //temp
+        private List<Route> _generatedRoutes = new List<Route>(); //temp
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -34,12 +36,22 @@ namespace mobileApp
             
             SetUpMap();
             _generatedRoutesView = FindViewById<ScrollView>(Resource.Id.routesScrollView);
-            _generatedRoutes.Add(new RouteToDisplay("Vilnius", "Siauliai", "Klaipeda", "11"));
-            _generatedRoutes.Add(new RouteToDisplay("Ukmerge", "Panevezys", "Palanga", "15"));
-            _generatedRoutes.Add(new RouteToDisplay("Kaunas", "Trakai", "Telsiai", "8"));
-            _generatedRoutes.Add(new RouteToDisplay("Vilnius", "Ukmerge", "Taujenai", "5"));
-            _generatedRoutes.Add(new RouteToDisplay("Kaunas", "Trakai", "Telsiai", "8"));
-            _generatedRoutes.Add(new RouteToDisplay("Vilnius", "Ukmerge", "Taujenai", "5"));
+            //testing
+            var vilnius = new Stop("Vilnius");
+            var klaipeda = new Stop("Klaipeda");
+            _generatedRoutes.Add(new Route(vilnius, klaipeda));
+            _generatedRoutes.Add(new Route(vilnius, klaipeda));
+            _generatedRoutes.Add(new Route(vilnius, klaipeda));
+            _generatedRoutes.Add(new Route(vilnius, klaipeda));
+            _generatedRoutes.Add(new Route(vilnius, klaipeda));
+            _generatedRoutes.Add(new Route(vilnius, klaipeda));
+            _generatedRoutes.Add(new Route(vilnius, klaipeda));
+            _generatedRoutes.Add(new Route(vilnius, klaipeda));
+            _generatedRoutes.Add(new Route(vilnius, klaipeda));
+            _generatedRoutes.Add(new Route(vilnius, klaipeda));
+            _generatedRoutes.Add(new Route(vilnius, klaipeda));
+            _generatedRoutes.Add(new Route(vilnius, klaipeda));
+            _generatedRoutes.Add(new Route(vilnius, klaipeda));
 
             ShowGeneratedRoutes();
         }
@@ -61,6 +73,7 @@ namespace mobileApp
                 button.Text = "Pirkti";
                 button.Background = Resources.GetDrawable(Resource.Drawable.OrangeActionBtn); //deprecated but fuck it
                 button.SetTextColor(Color.White);
+                button.Click += (obj, evnt) => { Order(route); };
 
                 var tableRow = new TableRow(this);
                 tableRow.SetMinimumHeight(250);
@@ -73,8 +86,8 @@ namespace mobileApp
 
         private void Order(Route route)
         {
-            string output = string.Empty;
-            //string output = JsonConvert.SerializeObject(route);
+            //string output = string.Empty;
+            string output = JsonConvert.SerializeObject(route);
 
             var activity2 = new Intent(this, typeof(OrderActivity));
             activity2.PutExtra("ChosenRoute", output);
