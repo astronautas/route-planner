@@ -5,6 +5,7 @@
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
+  
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,4 +44,11 @@
             android:onClick="searchBtnClick"
             android:textColor="#fff" />
     </LinearLayout>
+  
+    <FrameLayout
+        android:id="@+id/bottom_toolbar_container"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </RelativeLayout>
