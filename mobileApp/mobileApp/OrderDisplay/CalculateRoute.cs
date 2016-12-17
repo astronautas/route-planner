@@ -12,7 +12,7 @@ using Android.Widget;
 using System.IO;
 using Android.Content.Res;
 
-namespace mobileApp
+namespace mobileApp.OrderDisplay
 {
     static class CalculateRoute
     {

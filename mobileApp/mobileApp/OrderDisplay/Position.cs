@@ -10,7 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace mobileApp
+namespace mobileApp.OrderDisplay
 {
     class Position
     {

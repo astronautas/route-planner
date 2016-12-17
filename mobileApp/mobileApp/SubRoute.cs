@@ -40,7 +40,6 @@ namespace mobileApp
             if(CheckIfProperCostAndTime(cost, time) && CheckIfProperStops(from,to))
             {
                 From = from;
-                From.DirectsTo = to;
                 To = to;
                 Cost = cost;
                 Time = time;
@@ -57,7 +56,7 @@ namespace mobileApp
 
         private bool CheckIfProperCostAndTime(double cost, double time)
         {
-            if (cost < 0 || time<0 | time >= 24)
+            if (cost < 0 || time<0 || time >= 24)
                 return false;
             return true;
 
@@ -65,7 +64,8 @@ namespace mobileApp
 
         public override string ToString()
         {
-            return "From " + From.Name + " to " + To.Name + " costs " + Cost + " and takes " + Time + " time.";
+            string time = string.Format("   {0:0.00}h", Time);
+            return From.Name + " - " + To.Name + "   " + Cost + "€" + time;
         }
     }
 }

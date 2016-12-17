@@ -7,7 +7,12 @@ namespace mobileApp
 {
     class Route
     {
-        private List<SubRoute> _subRoutes;
+        public List<SubRoute> RouteSubRoutes
+        {
+            get;
+            set;
+        }
+
         public Stop Source
         {
             get;
@@ -19,45 +24,64 @@ namespace mobileApp
             set;
         }
 
+        public Stop MiddleCity
+        {
+            get;
+            set;
+        }
+
+        public double Cost
+        {
+            get;
+            set;
+        }
+        public double Time
+        {
+            get;
+            set;
+        }
+
+        public void SetMiddleCity()
+        {
+            var stops = GetStops();
+            MiddleCity = stops[Convert.ToInt32((stops.IndexOf(stops.FirstOrDefault()) + stops.IndexOf(stops.LastOrDefault())) / 2)];
+        }
+
+        public Route()
+        {
+
+        }
+
         public Route(Stop source, Stop destination)
         {
-           _subRoutes = new List<SubRoute>();
+            RouteSubRoutes = new List<SubRoute>();
             Source = source;
             Destination = destination;
         }
 
         public List<SubRoute> GetSubRoutes()
         {
-            return _subRoutes;
+            return RouteSubRoutes;
         }
 
         public List<Stop> GetStops()
         {
-            var stops = _subRoutes.Select(x => x.From).ToList();
+            var stops = RouteSubRoutes.Select(x => x.From).ToList();
             stops.Add(Destination);
             return stops;
         }
 
         public void AddSubRoute(SubRoute subRoute)
         {
-            _subRoutes.Add(subRoute);
+            RouteSubRoutes.Add(subRoute);
+            SetMiddleCity();
+            Cost = RouteSubRoutes.Sum(x => x.Cost);
+            Time = RouteSubRoutes.Sum(x => x.Time);
         }
 
-        public double FullCost()
+        public override string ToString()
         {
-            return _subRoutes.Sum(x => x.Cost);
-        }
-
-        public double FullTime()
-        {
-            return _subRoutes.Sum(x => x.Time);
-        }
-        
-
-        public RouteToDisplay ToRouteDisplay()
-        {
-            //converts route for display
-            throw new NotImplementedException();
+            return Source.Name + "  -  " +  MiddleCity.Name + "  -  " + Destination.Name;
         }
     }
 }
