@@ -2648,8 +2648,8 @@ namespace mobileApp
 			// aapt resource value: 0x7f0a008a
 			public const int btnLogin = 2131361930;
 			
-			// aapt resource value: 0x7f0a00c6
-			public const int btnRegister = 2131361990;
+			// aapt resource value: 0x7f0a00c7
+			public const int btnRegister = 2131361991;
 			
 			// aapt resource value: 0x7f0a004f
 			public const int buttonPanel = 2131361871;
@@ -2918,29 +2918,29 @@ namespace mobileApp
 			// aapt resource value: 0x7f0a0034
 			public const int pin = 2131361844;
 			
-			// aapt resource value: 0x7f0a00b7
-			public const int place_autocomplete_clear_button = 2131361975;
-			
-			// aapt resource value: 0x7f0a00b9
-			public const int place_autocomplete_powered_by_google = 2131361977;
-			
-			// aapt resource value: 0x7f0a00bb
-			public const int place_autocomplete_prediction_primary_text = 2131361979;
-			
-			// aapt resource value: 0x7f0a00bc
-			public const int place_autocomplete_prediction_secondary_text = 2131361980;
+			// aapt resource value: 0x7f0a00b8
+			public const int place_autocomplete_clear_button = 2131361976;
 			
 			// aapt resource value: 0x7f0a00ba
-			public const int place_autocomplete_progress = 2131361978;
+			public const int place_autocomplete_powered_by_google = 2131361978;
 			
-			// aapt resource value: 0x7f0a00b5
-			public const int place_autocomplete_search_button = 2131361973;
+			// aapt resource value: 0x7f0a00bc
+			public const int place_autocomplete_prediction_primary_text = 2131361980;
+			
+			// aapt resource value: 0x7f0a00bd
+			public const int place_autocomplete_prediction_secondary_text = 2131361981;
+			
+			// aapt resource value: 0x7f0a00bb
+			public const int place_autocomplete_progress = 2131361979;
 			
 			// aapt resource value: 0x7f0a00b6
-			public const int place_autocomplete_search_input = 2131361974;
+			public const int place_autocomplete_search_button = 2131361974;
 			
-			// aapt resource value: 0x7f0a00b8
-			public const int place_autocomplete_separator = 2131361976;
+			// aapt resource value: 0x7f0a00b7
+			public const int place_autocomplete_search_input = 2131361975;
+			
+			// aapt resource value: 0x7f0a00b9
+			public const int place_autocomplete_separator = 2131361977;
 			
 			// aapt resource value: 0x7f0a0006
 			public const int progress_circular = 2131361798;
@@ -2951,11 +2951,11 @@ namespace mobileApp
 			// aapt resource value: 0x7f0a005f
 			public const int radio = 2131361887;
 			
-			// aapt resource value: 0x7f0a00c7
-			public const int regbtnFB = 2131361991;
-			
 			// aapt resource value: 0x7f0a00c8
-			public const int regbtnTwitter = 2131361992;
+			public const int regbtnFB = 2131361992;
+			
+			// aapt resource value: 0x7f0a00c9
+			public const int regbtnTwitter = 2131361993;
 			
 			// aapt resource value: 0x7f0a003b
 			public const int right = 2131361851;
@@ -3068,6 +3068,9 @@ namespace mobileApp
 			// aapt resource value: 0x7f0a0070
 			public const int submit_area = 2131361904;
 			
+			// aapt resource value: 0x7f0a00b5
+			public const int successBtn = 2131361973;
+			
 			// aapt resource value: 0x7f0a0019
 			public const int tabMode = 2131361817;
 			
@@ -3083,14 +3086,14 @@ namespace mobileApp
 			// aapt resource value: 0x7f0a0058
 			public const int textSpacerNoButtons = 2131361880;
 			
-			// aapt resource value: 0x7f0a00be
-			public const int textView1 = 2131361982;
+			// aapt resource value: 0x7f0a00bf
+			public const int textView1 = 2131361983;
 			
-			// aapt resource value: 0x7f0a00c0
-			public const int textView3 = 2131361984;
+			// aapt resource value: 0x7f0a00c1
+			public const int textView3 = 2131361985;
 			
-			// aapt resource value: 0x7f0a00c4
-			public const int textView5 = 2131361988;
+			// aapt resource value: 0x7f0a00c5
+			public const int textView5 = 2131361989;
 			
 			// aapt resource value: 0x7f0a00ad
 			public const int time = 2131361965;
@@ -3131,23 +3134,23 @@ namespace mobileApp
 			// aapt resource value: 0x7f0a0083
 			public const int txtMainMiddleCity = 2131361923;
 			
-			// aapt resource value: 0x7f0a00c3
-			public const int txtRegCardCode = 2131361987;
+			// aapt resource value: 0x7f0a00c4
+			public const int txtRegCardCode = 2131361988;
 			
-			// aapt resource value: 0x7f0a00c5
-			public const int txtRegCardDate = 2131361989;
+			// aapt resource value: 0x7f0a00c6
+			public const int txtRegCardDate = 2131361990;
+			
+			// aapt resource value: 0x7f0a00c3
+			public const int txtRegCardNumber = 2131361987;
+			
+			// aapt resource value: 0x7f0a00be
+			public const int txtRegister = 2131361982;
+			
+			// aapt resource value: 0x7f0a00c0
+			public const int txtRegisterEmail = 2131361984;
 			
 			// aapt resource value: 0x7f0a00c2
-			public const int txtRegCardNumber = 2131361986;
-			
-			// aapt resource value: 0x7f0a00bd
-			public const int txtRegister = 2131361981;
-			
-			// aapt resource value: 0x7f0a00bf
-			public const int txtRegisterEmail = 2131361983;
-			
-			// aapt resource value: 0x7f0a00c1
-			public const int txtRegisterPassword = 2131361985;
+			public const int txtRegisterPassword = 2131361986;
 			
 			// aapt resource value: 0x7f0a0084
 			public const int txtSecondDash = 2131361924;
@@ -3420,34 +3423,37 @@ namespace mobileApp
 			public const int Order = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public const int place_autocomplete_fragment = 2130903096;
+			public const int order_success = 2130903096;
 			
 			// aapt resource value: 0x7f030039
-			public const int place_autocomplete_item_powered_by_google = 2130903097;
+			public const int place_autocomplete_fragment = 2130903097;
 			
 			// aapt resource value: 0x7f03003a
-			public const int place_autocomplete_item_prediction = 2130903098;
+			public const int place_autocomplete_item_powered_by_google = 2130903098;
 			
 			// aapt resource value: 0x7f03003b
-			public const int place_autocomplete_progress = 2130903099;
+			public const int place_autocomplete_item_prediction = 2130903099;
 			
 			// aapt resource value: 0x7f03003c
-			public const int Register = 2130903100;
+			public const int place_autocomplete_progress = 2130903100;
 			
 			// aapt resource value: 0x7f03003d
-			public const int select_dialog_item_material = 2130903101;
+			public const int Register = 2130903101;
 			
 			// aapt resource value: 0x7f03003e
-			public const int select_dialog_multichoice_material = 2130903102;
+			public const int select_dialog_item_material = 2130903102;
 			
 			// aapt resource value: 0x7f03003f
-			public const int select_dialog_singlechoice_material = 2130903103;
+			public const int select_dialog_multichoice_material = 2130903103;
 			
 			// aapt resource value: 0x7f030040
-			public const int support_simple_spinner_dropdown_item = 2130903104;
+			public const int select_dialog_singlechoice_material = 2130903104;
 			
 			// aapt resource value: 0x7f030041
-			public const int toolbar = 2130903105;
+			public const int support_simple_spinner_dropdown_item = 2130903105;
+			
+			// aapt resource value: 0x7f030042
+			public const int toolbar = 2130903106;
 			
 			static Layout()
 			{

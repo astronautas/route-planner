@@ -135,6 +135,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="MapsManager.cs" />
     <Compile Include="OrderDisplay\OrderActivity.cs" />
+    <Compile Include="OrderDisplay\OrderSuccess.cs" />
     <Compile Include="OrderDisplay\Position.cs" />
     <Compile Include="Registration\RegistrationActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -165,6 +166,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\bottom_toolbar.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\order_success.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
