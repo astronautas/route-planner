@@ -7,44 +7,52 @@ namespace mobileApp
 {
     class Route
     {
-        private List<Stop> _stops;
-        private List<float> _costs;
-        private List<float> _times;
-
-        public Route()
+        private List<SubRoute> _subRoutes;
+        public Stop Source
         {
-            _stops = null;
-            _costs = null;
-            _times = null;
+            get;
+            set;
+        }
+        public Stop Destination
+        {
+            get;
+            set;
         }
 
-        public void AddStop(Stop stop, float cost, float time)
+        public Route(Stop source, Stop destination)
         {
-            if (_stops != null)
-            {
-                _costs.Add(cost);
-                _times.Add(time);
-            }
-            _stops.Add(stop);
+           _subRoutes = new List<SubRoute>();
+            Source = source;
+            Destination = destination;
         }
 
-        public void AddSubRoute(Stop from, Stop to, float cost, float time)
+        public List<SubRoute> GetSubRoutes()
         {
-            _stops.Add(from);
-            _stops.Add(to);
-            _costs.Add(cost);
-            _times.Add(time);
+            return _subRoutes;
         }
 
-        public float FullCost()
+        public List<Stop> GetStops()
         {
-            return _costs.Sum();
+            var stops = _subRoutes.Select(x => x.From).ToList();
+            stops.Add(Destination);
+            return stops;
         }
 
-        public float FullTime()
+        public void AddSubRoute(SubRoute subRoute)
         {
-            return _times.Sum();
+            _subRoutes.Add(subRoute);
         }
+
+        public double FullCost()
+        {
+            return _subRoutes.Sum(x => x.Cost);
+        }
+
+        public double FullTime()
+        {
+            return _subRoutes.Sum(x => x.Time);
+        }
+        
 
         public RouteToDisplay ToRouteDisplay()
         {

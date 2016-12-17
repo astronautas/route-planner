@@ -32,6 +32,7 @@ namespace mobileApp
         private ListView _list;
         private List<RouteToDisplay> _items;
         private Polyline finalRoute;
+        private Route route;
 
         protected override void OnCreate(Bundle bundle)
         {
