@@ -41,12 +41,31 @@ namespace mobileApp
         {
             _btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
             _btnLogin.Click += LoginButtonClicked;
+
+            var searchBtn = FindViewById<ImageView>(Resource.Id.searchBtn);
+            searchBtn.Click += onSearchClick;
+
+            var loginBtn = FindViewById<ImageView>(Resource.Id.loginBtn);
+            loginBtn.Click += onLoginClick;
         }
 
         private void LoginButtonClicked(object sender, EventArgs args)
         {
             _txtLoginEmail = FindViewById<EditText>(Resource.Id.txtLoginEmail);
             _txtLoginPassword = FindViewById<EditText>(Resource.Id.txtLoginPassword);
+
+            StartActivity(typeof(MainActivity));
+        }
+
+        // Bottom toolbar events
+        public void onLoginClick(object sender, EventArgs ea)
+        {
+            StartActivity(typeof(LoginActivity));
+        }
+
+        public void onSearchClick(object sender, EventArgs ea)
+        {
+            StartActivity(typeof(MainActivity));
         }
     }
 }

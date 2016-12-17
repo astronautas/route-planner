@@ -29,7 +29,6 @@ namespace mobileApp
             ft.Add(Resource.Id.fragmentMap, mapFragment);
             ft.Commit();
             
-
             SetUpMap();
         }
 

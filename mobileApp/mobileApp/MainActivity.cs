@@ -16,7 +16,6 @@ namespace mobileApp
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
 
-            
             LoadToolbar();
             LoadEvents();
         }
@@ -33,6 +32,12 @@ namespace mobileApp
             Button button = FindViewById<Button>(Resource.Id.SearchRoutesBtn);
 
             button.Click += HandleSearchRoutesBtnClick;
+
+            var searchBtn = FindViewById<ImageView>(Resource.Id.searchBtn);
+            searchBtn.Click += onSearchClick;
+
+            var loginBtn = FindViewById<ImageView>(Resource.Id.loginBtn);
+            loginBtn.Click += onLoginClick;
         }
 
         private void HandleSearchRoutesBtnClick(object sender, EventArgs ea)
@@ -40,8 +45,18 @@ namespace mobileApp
             var firstCity = FindViewById<EditText>(Resource.Id.firstCity).Text;
             var secondCity = FindViewById<EditText>(Resource.Id.secondCity).Text;
 
-            // Call route search here
             StartActivity(typeof(GeneratedRoutes));
+        }
+
+        // Bottom toolbar events
+        public void onLoginClick(object sender, EventArgs ea)
+        {
+            StartActivity(typeof(LoginActivity));
+        }
+
+        public void onSearchClick(object sender, EventArgs ea)
+        {
+            StartActivity(typeof(MainActivity));
         }
     }
 }
