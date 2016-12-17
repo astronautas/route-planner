@@ -10,20 +10,12 @@
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
-    <RelativeLayout
-        android:layout_weight="50"
+    <FrameLayout
+        android:layout_weight="35"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
-        <Button
-            android:background="@drawable/OrangeActionBtn"
-            android:id="@+id/siaip"
-            android:layout_below="@+id/toolbar"
-            android:text="GOOGLE MAPS HERE"
-            android:textSize="50sp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="#fff" />
-    </RelativeLayout>
+        android:layout_height="80dp"
+        android:id="@+id/fragmentMap">
+    </FrameLayout>
     <RelativeLayout
         android:layout_weight="8"
         android:layout_width="match_parent"
@@ -76,7 +68,7 @@
         </TableRow>
     </RelativeLayout>
     <RelativeLayout
-        android:layout_weight="27"
+        android:layout_weight="35"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:minWidth="25px"
@@ -92,7 +84,7 @@
             android:id="@+id/listRoutes" />
     </RelativeLayout>
     <RelativeLayout
-        android:layout_weight="10"
+        android:layout_weight="15"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:minWidth="25px"

@@ -26,7 +26,7 @@ namespace mobileApp
 
             mapFragment = new MapFragment();
             var ft = FragmentManager.BeginTransaction();
-            ft.Add(Resource.Id.fragment_container, mapFragment);
+            ft.Add(Resource.Id.fragmentMap, mapFragment);
             ft.Commit();
             
             SetUpMap();

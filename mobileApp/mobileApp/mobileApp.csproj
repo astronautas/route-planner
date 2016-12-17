@@ -128,12 +128,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OrderDisplay\CalculateRoute.cs" />
     <Compile Include="GeneratedRoutes.cs" />
     <Compile Include="Header.cs" />
     <Compile Include="Login\LoginActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MapsManager.cs" />
     <Compile Include="OrderDisplay\OrderActivity.cs" />
+    <Compile Include="OrderDisplay\Position.cs" />
     <Compile Include="Registration\RegistrationActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -229,6 +231,7 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\search.png" />
+    <AndroidAsset Include="Assets\routepoints.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
