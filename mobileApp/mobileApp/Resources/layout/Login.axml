@@ -46,6 +46,43 @@
         android:layout_height="wrap_content"
         android:text="Prisijungti"
         android:textColor="#fff" />
+
+    <RelativeLayout
+       android:layout_weight="5"
+       android:layout_below="@+id/btnLogin"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+      <TableRow
+          android:id="@+id/logTableRow"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:id="@+id/btnLogFB"
+            android:src="@drawable/facebook_img" />
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:id="@+id/btnLogTwitter"
+            android:src="@drawable/twitter_img" />
+      </TableRow>
+    </RelativeLayout>
+
+    <Button
+      android:background="@drawable/OrangeActionBtn"
+      android:id="@+id/btnToRegistration"
+      android:layout_marginTop="35dp"
+      android:layout_below="@+id/logTableRow"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Registruokis čia!"
+      android:textColor="#fff" />
   
   </LinearLayout>
   

@@ -101,7 +101,7 @@ namespace mobileApp.OrderDisplay
         private void ShowOnMap()
         {
             var polylineoption = new PolylineOptions();
-            polylineoption.InvokeColor(Color.Red);
+            polylineoption.InvokeColor(Color.ParseColor("#509BFC"));
             polylineoption.Geodesic(true);
 
             List<Position> route = CalculateRoute.GetPositions(Assets);

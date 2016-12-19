@@ -19,14 +19,24 @@ namespace mobileApp.OrderDisplay
         public static List<Position> GetPositions(AssetManager assets)
         {
             List<Position> list = new List<Position>();
-            using (StreamReader reader = new StreamReader(assets.Open("routepoints.txt")))
+            /* using (StreamReader reader = new StreamReader(assets.Open("routepoints.txt")))
+             {
+                 while (!reader.EndOfStream)
+                 {
+                     var line = reader.ReadLine();
+                     var words = line.Split(' ');
+                     double lng;
+                     double lat;
+                     Double.TryParse(words[1], out lng);
+                     Double.TryParse(words[0], out lat);
+                     list.Add(new Position(lng, lat));
+                 }
+             }
+             return list;*/
+            Coords coordinates = new Coords();
+            for(int i = 0; i < coordinates.Count(); i=i+2)
             {
-                while (!reader.EndOfStream)
-                {
-                    var line = reader.ReadLine();
-                    var words = line.Split(' ');
-                    list.Add(new Position(Convert.ToDouble(words[1]), Convert.ToDouble(words[0])));
-                }
+                list.Add(new Position(coordinates[i+1], coordinates[i]));
             }
             return list;
         }

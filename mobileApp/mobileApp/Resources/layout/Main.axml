@@ -5,7 +5,6 @@
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
-  
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,7 +12,6 @@
         android:layout_centerVertical="true"
         android:paddingRight="16dp"
         android:orientation="vertical">
-      
         <EditText
             android:layout_weight="30"
             android:layout_width="match_parent"
@@ -28,13 +26,12 @@
             android:layout_weight="30"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/CityAText"
+            android:hint="@string/CityBText"
             android:layout_marginBottom="4dp"
             android:theme="@style/ThemeWithActionBar"
             android:textColor="#fcb150"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/secondCity" />
-      
         <Button
             android:background="@drawable/OrangeActionBtn"
             android:id="@+id/SearchRoutesBtn"
@@ -46,6 +43,6 @@
             android:onClick="searchBtnClick"
             android:textColor="#fff" />
     </LinearLayout>
-
-    <include layout ="@layout/bottom_toolbar" />
+    <include
+        layout="@layout/bottom_toolbar" />
 </RelativeLayout>

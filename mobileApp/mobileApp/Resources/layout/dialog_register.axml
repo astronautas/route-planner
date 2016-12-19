@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#fff"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="300dp"
+    android:minHeight="300dp">
+  <TextView
+      android:id="@+id/txtCongratsOnReg"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Sveikiname prisiregistravus!"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:layout_marginBottom="30dp"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      android:gravity="center"
+      android:layout_marginTop="50dp"
+      android:textColor="#fcb150"/>
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/txtCongratsOnReg"
+      android:layout_marginTop="75dp">
+    <Button
+        android:text="Tęsti!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRegDialogProceed"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:background="#fcb150"
+        android:height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp" />
+  </RelativeLayout>
+</RelativeLayout>

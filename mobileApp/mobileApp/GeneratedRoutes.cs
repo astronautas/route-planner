@@ -13,6 +13,7 @@ using Android.Gms.Maps;
 using Android.Graphics;
 using mobileApp.OrderDisplay;
 using Newtonsoft.Json;
+using Android.Gms.Maps.Model;
 
 namespace mobileApp
 {
@@ -37,15 +38,18 @@ namespace mobileApp
             SetUpMap();
             _generatedRoutesView = FindViewById<ScrollView>(Resource.Id.routesScrollView);
             //testing
+
             var vilnius = new Stop("Vilnius");
             var klaipeda = new Stop("Klaipeda");
-            _generatedRoutes.Add(new Route(vilnius, klaipeda));
-            _generatedRoutes.Add(new Route(vilnius, klaipeda));
-            _generatedRoutes.Add(new Route(vilnius, klaipeda));
-            _generatedRoutes.Add(new Route(vilnius, klaipeda));
-            _generatedRoutes.Add(new Route(vilnius, klaipeda));
-            _generatedRoutes.Add(new Route(vilnius, klaipeda));
-            _generatedRoutes.Add(new Route(vilnius, klaipeda));
+            var ukm = new Stop("Ukmerge");
+            var tjn = new Stop("Taujenai");
+            var myroute = new Route(vilnius, tjn);
+            myroute.AddSubRoute(new SubRoute(vilnius, ukm, 5.00, 1.05));
+            myroute.AddSubRoute(new SubRoute(ukm, tjn, 3.00, 0.30));
+            var myroute2 = new Route(vilnius, tjn);
+            myroute2.AddSubRoute(new SubRoute(vilnius, tjn, 8.00, 0.75));
+            _generatedRoutes.Add(myroute);
+            _generatedRoutes.Add(myroute2);
             _generatedRoutes.Add(new Route(vilnius, klaipeda));
             _generatedRoutes.Add(new Route(vilnius, klaipeda));
             _generatedRoutes.Add(new Route(vilnius, klaipeda));
@@ -64,20 +68,24 @@ namespace mobileApp
                 var text = new TextView(this);
                 text.Text = route.ToString();
                 text.SetTextColor(new Color(252, 177, 80)); //our orange
-                text.SetTextSize(Android.Util.ComplexUnitType.Pt, 10);
+                text.SetTextSize(Android.Util.ComplexUnitType.Pt, 7);
                 //text.SetWidth();
                 //text.SetHeight();
 
+                TableRow.LayoutParams par = new TableRow.LayoutParams();
+                par.SetMargins(100, 0, 0, 0);
                 var button = new Button(this);
+               
                 button.Text = "Pirkti";
                 button.Background = Resources.GetDrawable(Resource.Drawable.OrangeActionBtn); //deprecated but fuck it
                 button.SetTextColor(Color.White);
                 button.Click += (obj, evnt) => { Order(route); };
 
+
                 var tableRow = new TableRow(this);
                 tableRow.SetMinimumHeight(250);
                 tableRow.AddView(text);
-                tableRow.AddView(button);
+                tableRow.AddView(button, par);
 
                 layout.AddView(tableRow);
             }
@@ -93,6 +101,18 @@ namespace mobileApp
             StartActivity(activity2);
         }
 
+        private void UpdateCameraPosition(LatLng pos)
+        {
+            CameraPosition.Builder builder = CameraPosition.InvokeBuilder();
+            builder.Target(pos);
+            builder.Zoom(6);
+            builder.Bearing(5);
+            builder.Tilt(20);
+            CameraPosition cameraPosition = builder.Build();
+            CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition(cameraPosition);
+            mMap.AnimateCamera(cameraUpdate);
+        }
+
         private void SetUpMap()
         {
             if (mMap == null)
@@ -104,6 +124,7 @@ namespace mobileApp
         public void OnMapReady(GoogleMap googleMap)
         {
             mMap = googleMap;
+            UpdateCameraPosition(new LatLng(55.326804, 23.904320));
         }
     }
 }

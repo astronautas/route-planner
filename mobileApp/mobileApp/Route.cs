@@ -81,6 +81,8 @@ namespace mobileApp
 
         public override string ToString()
         {
+            if (MiddleCity != null && (MiddleCity.Name == Source.Name || MiddleCity.Name == Destination.Name))
+                MiddleCity = null;
             return MiddleCity == null? Source.Name + "  -  " + Destination.Name : Source.Name + "  -  " +  MiddleCity.Name + "  -  " + Destination.Name;
         }
     }

@@ -18,12 +18,14 @@ namespace mobileApp
         private EditText _txtLoginEmail;
         private EditText _txtLoginPassword;
         private Button _btnLogin;
+        private Button _btnToRegistration;
+        private ImageButton _btnLogFB;
+        private ImageButton _btnLogTwitter;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Login);
 
             LoadToolbar();
@@ -39,8 +41,18 @@ namespace mobileApp
 
         private void LoadEvents()
         {
+
+            _btnLogFB = FindViewById<ImageButton>(Resource.Id.btnLogFB);
+            _btnLogFB.Click += ButtonLogWithTwitterClicked;
+
+            _btnLogTwitter = FindViewById<ImageButton>(Resource.Id.btnLogTwitter);
+            _btnLogTwitter.Click += ButtonLogWithFBClicked;
+
             _btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
             _btnLogin.Click += LoginButtonClicked;
+
+            _btnToRegistration = FindViewById<Button>(Resource.Id.btnToRegistration);
+            _btnToRegistration.Click += RegisterHereButtonClicked;
 
             var searchBtn = FindViewById<ImageView>(Resource.Id.searchBtn);
             searchBtn.Click += onSearchClick;
@@ -49,12 +61,27 @@ namespace mobileApp
             loginBtn.Click += onLoginClick;
         }
 
+        private void ButtonLogWithFBClicked(object sender, EventArgs e)
+        {
+            OpenDialog();
+        }
+
+        private void ButtonLogWithTwitterClicked(object sender, EventArgs e)
+        {
+            OpenDialog();
+        }
+
+        private void RegisterHereButtonClicked(object sendeer, EventArgs args)
+        {
+            StartActivity(typeof(RegistrationActivity));
+        }
+
         private void LoginButtonClicked(object sender, EventArgs args)
         {
             _txtLoginEmail = FindViewById<EditText>(Resource.Id.txtLoginEmail);
             _txtLoginPassword = FindViewById<EditText>(Resource.Id.txtLoginPassword);
 
-            StartActivity(typeof(MainActivity));
+            OpenDialog();
         }
 
         // Bottom toolbar events
@@ -66,6 +93,12 @@ namespace mobileApp
         public void onSearchClick(object sender, EventArgs ea)
         {
             StartActivity(typeof(MainActivity));
+        }
+        private void OpenDialog()
+        {
+            FragmentTransaction transaction = FragmentManager.BeginTransaction();
+            DialogLogIn logInDialog = new DialogLogIn();
+            logInDialog.Show(transaction, "dialog fragment");
         }
     }
 }

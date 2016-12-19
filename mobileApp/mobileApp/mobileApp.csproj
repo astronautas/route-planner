@@ -132,6 +132,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Coords.cs" />
+    <Compile Include="Registration\DialogRegister.cs" />
     <Compile Include="OrderDisplay\CalculateRoute.cs" />
     <Compile Include="GeneratedRoutes.cs" />
     <Compile Include="Header.cs" />
@@ -142,6 +144,7 @@
     <Compile Include="OrderDisplay\OrderSuccess.cs" />
     <Compile Include="OrderDisplay\Position.cs" />
     <Compile Include="Registration\RegistrationActivity.cs" />
+    <Compile Include="Login\DialogLogIn.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Route.cs" />
@@ -172,6 +175,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\order_success.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\dialog_log_in.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\dialog_register.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

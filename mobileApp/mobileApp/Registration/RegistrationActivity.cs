@@ -62,14 +62,23 @@ namespace mobileApp
 
             //Save data
 
+            OpenDialog();
         }
         private void RegisterWithFacebookClick(object sender, EventArgs args)
         {
+            OpenDialog();
             //Implement Registration with facebook
         }
         private void RegisterWithTwitterClick(object sender, EventArgs args)
         {
+            OpenDialog();
             //Implemetn Registration with twitter
+        }
+        private void OpenDialog()
+        {
+            FragmentTransaction transaction = FragmentManager.BeginTransaction();
+            DialogRegister logInDialog = new DialogRegister();
+            logInDialog.Show(transaction, "dialog fragment");
         }
 
     }
